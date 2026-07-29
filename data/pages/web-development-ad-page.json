@@ -1,0 +1,74 @@
+{
+  "id": "581",
+  "title": "Web Development Ad-Page",
+  "slug": "web-development-ad-page",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Web Development(No Codes)"
+    },
+    {
+      "type": "text",
+      "html": "<p>A Professional way to build websites using WordPress &amp; some plugins. Just a drag and drop technique that can be learnt in a day.</p><p>\u00a0</p><p><span style=\"text-decoration: underline;\"><strong>What Programmers Create In About 10 Days, Create It In A Day.</strong></span></p>"
+    },
+    {
+      "type": "heading",
+      "text": " \u20a61k Only!"
+    },
+    {
+      "type": "heading",
+      "text": "Professional Web Development<br>"
+    },
+    {
+      "type": "text",
+      "html": "<p>I spent weeks working on this tutorial videos.</p><p>\u00a0</p><p><strong>10 Practical Videos</strong></p>"
+    },
+    {
+      "type": "button",
+      "text": "Buy via Whatsapp",
+      "url": "https://wa.link/n1lz0k"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2021/07/vlcsnap-2021-07-16-16h55m37s746.png"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2021/07/vlcsnap-2021-07-16-16h55m54s996.png"
+    },
+    {
+      "type": "heading",
+      "text": "I Explained:"
+    },
+    {
+      "type": "text",
+      "html": "<p>- Buy Domain &amp; Hosting For As Cheap As 7k(No need if you already have)</p><p style=\"text-align: center;\">- Creating Custom Email</p><p style=\"text-align: center;\"><strong>- Web Development(No Codes) Explained!</strong></p><p style=\"text-align: center;\">- Creating A Landing Page For Your Products</p><p style=\"text-align: center;\"><strong>- How Receive Orders Via WhatsApp &amp; Your Email From Your Customers</strong></p><p style=\"text-align: center;\"><strong>- Professional Home Page &amp; Menu</strong></p>"
+    },
+    {
+      "type": "button",
+      "text": "Buy via Whatsapp",
+      "url": "https://wa.link/n1lz0k"
+    },
+    {
+      "type": "heading",
+      "text": "Watch!"
+    },
+    {
+      "type": "text",
+      "html": "<p>A quick glance through the 20 Videos.</p><p>You can watch and download the 20 Videos.</p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "heading",
+      "text": "Purchase"
+    },
+    {
+      "type": "button",
+      "text": "Buy via Whatsapp",
+      "url": "https://wa.link/n1lz0k"
+    }
+  ]
+}

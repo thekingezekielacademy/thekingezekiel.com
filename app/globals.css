@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --portfolio-bg: #080808;
+  --portfolio-fg: #EDEDED;
+  --portfolio-muted: #A1A1AA;
+  --portfolio-gold: #d4af37;
+  --portfolio-gold-muted: rgba(212, 175, 55, 0.2);
+  --portfolio-card: #111111;
+  --portfolio-border: #222222;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-portfolio-bg: var(--portfolio-bg);
+  --color-portfolio-fg: var(--portfolio-fg);
+  --color-portfolio-muted: var(--portfolio-muted);
+  --color-portfolio-gold: var(--portfolio-gold);
+  --color-portfolio-gold-muted: var(--portfolio-gold-muted);
+  --color-portfolio-card: var(--portfolio-card);
+  --color-portfolio-border: var(--portfolio-border);
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--portfolio-bg);
+  color: var(--portfolio-fg);
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--portfolio-gold);
+  color: #000;
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--portfolio-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--portfolio-gold);
 }

@@ -1,0 +1,40 @@
+{
+  "id": "2038",
+  "title": "Happy Bird Purse",
+  "slug": "happy-bird-purse",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Happy Bird Purse"
+    },
+    {
+      "type": "heading",
+      "text": "Features"
+    },
+    {
+      "type": "text",
+      "html": "<ul><li>Several compartment</li><li>Quality Leather</li><li>Waterproof</li><li>Portable</li><li>Durable</li><li>Two-way handle</li><li>Metallic Gold Plated Zipper</li><li>Outer Phone</li><li>\u00a0Compartment</li></ul>"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2022/06/10417565016_1181717416.jpg"
+    },
+    {
+      "type": "text",
+      "html": "<p><span style=\"color: #ff0000;\"><del>Actual Price: \u20a621,000</del></span><br />New Price: \u20a618,000</p>"
+    },
+    {
+      "type": "button",
+      "text": "order via whatsapp",
+      "url": "https://wa.link/ix8uq3"
+    },
+    {
+      "type": "heading",
+      "text": "Watch Video"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    }
+  ]
+}

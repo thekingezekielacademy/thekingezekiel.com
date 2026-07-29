@@ -1,0 +1,15 @@
+{
+  "id": "1705",
+  "title": "Courses",
+  "slug": "courses",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "I  HAVE SOME COURSES FOR SALE"
+    },
+    {
+      "type": "text",
+      "html": "<p>I have some courses that might interest you, Click any of the courses you are interested in to LEARN MORE:</p>"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "6998",
+  "title": "AI ANIMATION SALES PAGE",
+  "slug": "ai-animation-sales-page",
+  "blocks": [
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\"><span style=\"color: #ffffff;\">YOU CAN MAKE PAYMENT &amp; GET STARTED IMMEDIATELY</span></p>"
+    },
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\"><span style=\"color: #ffcc99;\">AI CONTENT CREATION &amp; ANIMATION FULL PACKAGE</span></p>"
+    },
+    {
+      "type": "text",
+      "html": "<h3 data-path-to-node=\"0\"><span style=\"color: #ffffff;\"><b data-path-to-node=\"0\" data-index-in-node=\"0\">DON\u2019T GET LEFT BEHIND AGAIN.</b></span></h3><p data-path-to-node=\"1\"><b data-path-to-node=\"1\" data-index-in-node=\"0\">YOU MISSED THE FOREX WAVE.</b> <b data-path-to-node=\"1\" data-index-in-node=\"27\">YOU MISSED THE CRYPTO PUMP.</b> <b data-path-to-node=\"1\" data-index-in-node=\"55\">YOU MISSED THE AFFILIATE BOOM.</b></p><p data-path-to-node=\"2\"><b data-path-to-node=\"2\" data-index-in-node=\"0\">YOU ARE NOT MISSING THIS.</b> <br />I\u2019ve got you covered. This is the \"cheat code\" for the next era of digital wealth. While everyone else is still trying to figure out how to film a basic Reel, you\u2019ll be deploying high-tier AI assets that stop the scroll and stack the cash.</p>"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2026/05/images-1.png"
+    },
+    {
+      "type": "text",
+      "html": "<p dir=\"ltr\">Polaris Bank\u00a0</p><h3 dir=\"ltr\">4092109073</h3><p dir=\"ltr\">THE KING EZEKIEL ACADEMY LTD</p><h3 dir=\"ltr\"><strong><span style=\"color: #ff0000;\"><span style=\"color: #000000;\">PRICE: Just </span><del>\u20a610,000</del></span> <span style=\"color: #008000;\">\u20a63,000</span></strong></h3>"
+    },
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\"><span style=\"color: #ffcc00;\">Made Payments Already?</span></p>"
+    },
+    {
+      "type": "heading",
+      "text": "Whatsapp Number: 08101692624"
+    },
+    {
+      "type": "button",
+      "text": "I Just made Payments",
+      "url": "https://wa.link/5qor53"
+    }
+  ]
+}

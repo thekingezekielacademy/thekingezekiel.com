@@ -1,0 +1,49 @@
+{
+  "id": "2733",
+  "title": "How to Bake Cake",
+  "slug": "how-to-bake-cake",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "How To Bake A Cake"
+    },
+    {
+      "type": "heading",
+      "text": "Course Outline"
+    },
+    {
+      "type": "text",
+      "html": "<ul><li>How to .....</li><li>How to ......</li><li>How to .......</li></ul>"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2022/09/E-COMMERCE-101.png"
+    },
+    {
+      "type": "text",
+      "html": "<p><span style=\"color: #ff0000;\"><del>Original Price: \u20a610,000</del></span><br />Today's Price: \u20a65,000</p>"
+    },
+    {
+      "type": "button",
+      "text": "Buy Via Whatsapp",
+      "url": "https://wa.link/t8bpfe"
+    },
+    {
+      "type": "heading",
+      "text": "Watch This Video: "
+    },
+    {
+      "type": "youtube",
+      "url": "https://youtu.be/FFTR9es6Y7I"
+    },
+    {
+      "type": "text",
+      "html": "<p><span style=\"color: #ff0000;\"><del>Original Price: \u20a610,000</del></span><br />Today's Price: \u20a65,000</p>"
+    },
+    {
+      "type": "button",
+      "text": "Buy Via Whatsapp",
+      "url": "https://wa.link/t8bpfe"
+    }
+  ]
+}

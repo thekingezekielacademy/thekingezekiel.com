@@ -1,0 +1,53 @@
+{
+  "id": "1710",
+  "title": "Electric Lunch Box",
+  "slug": "electric-lunch-box",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Electric Lunch Box"
+    },
+    {
+      "type": "heading",
+      "text": "Features"
+    },
+    {
+      "type": "text",
+      "html": "<p>2 IN 1 CAR &amp; HOME DUAL USE - Our electric lunch box / food warmer contains two different plugs: one for work/home (110V) and another one for car/truck (12V).</p><p>SAFE FOOD GRADE MATERIAL - The electric bento box is made of food grade plastic and 304 stainless steel container.</p><p>FAST HEATING - Adopting PTC energy-saving heating components providing security against overheating.</p><p>EASY TO CLEAN - This food heater storage lunch box contains a removable stainless steel tray, which you can clean it easily.</p><p>FRIENDLY DESIGN - It has 2 compartments, stop mixing your food! We have included a removable plastic compartment in case you want to separate different types of food.</p>"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2022/03/mainimage512-24V-110V-220V-Portable-Electric-Heating-Stainless-Steel-Lunch-Box-Home-Car-Truck-Home-Rice.jpg"
+    },
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\"><span style=\"color: #ff0000;\"><del>Actual Price: \u20a617,500<br /></del></span>New Price: \u20a615,000</p>"
+    },
+    {
+      "type": "button",
+      "text": "Order Via Whatsapp ",
+      "url": "https://wa.link/of7wsw"
+    },
+    {
+      "type": "heading",
+      "text": "Watch Video"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "heading",
+      "text": "Order Now"
+    },
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\"><span style=\"color: #ff0000;\"><del>Actual Price: \u20a617,500<br /></del></span>New Price: \u20a615,000</p>"
+    },
+    {
+      "type": "button",
+      "text": "Order Via Whatsapp ",
+      "url": "https://wa.link/of7wsw"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "342",
+  "title": "Canva(Novice To Pro)-3",
+  "slug": "canvanovice-to-pro-3",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Canva(Novice To Pro)"
+    },
+    {
+      "type": "text",
+      "html": "<p><span style=\"text-decoration: underline;\"><strong>Part3</strong></span></p>"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>T1. Template - Logo Design</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong><span style=\"font-family: Catamaran-SemiBold, sans-serif;\">T2. Template - Resume Design</span></strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>T3. Template - Card</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>T4. Template - Flyer</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>T5. Template - Instagram Stories &amp; Posts</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    }
+  ]
+}

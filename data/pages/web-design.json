@@ -1,0 +1,159 @@
+{
+  "id": "1100",
+  "title": "Web Design",
+  "slug": "web-design",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Web Design(Using Adobe Xd)"
+    },
+    {
+      "type": "text",
+      "html": "<p>12 Videos</p>"
+    },
+    {
+      "type": "text",
+      "html": "<p>1.1. Installation Of Adobe XD</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/1.1.-Installation-Of-Adobe-XD.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>1.2. Prototype Explained - Make your designs work like a real app</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/1.2.-Prototype-Explained-Make-your-designs-work-like-a-real-app.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>1.3. How to add picture filters(colour filters)</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/1.5.-How-to-add-picture-filterscolour-filters.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 1. Boom Modelling Agency(Single Page)</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-1.-Boom-Modelling-AgencySingle-Page.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>2. Web Design(Novice To Pro)</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/2.-Web-DesignNovice-To-Pro.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 2. Landing Page(Smartwatch Sales Page)</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-2.-Landing-PageSmartwatch-Sales-Page.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 3. Our Meal.Our Religion</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-3.-Our-Meal.Our-Religion.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 4. Nike Single Page</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-4.-Nike-Single-Page.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 5. Famkay Landing Page(Smart Watch)</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-5.-Famkay-Landing-PageSmart-Watch.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 6. Blog(Fixed Background Explained)</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-6.-BlogFixed-Background-Explained.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 7. Akube furnitures</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-7.-Akube-furnitures.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 8 - Design Sample 1(mobile)</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-8-Design-Sample-1mobile.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 9 - Design Sample 2(web)</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-9-Design-Sample-2web.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 10 - Sales Page _ Stuck With You Lip Gloss</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-10-Sales-Page-_-Stuck-With-You-Lip-Gloss.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 11 - How to Install Plugins &amp; save project</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-11-How-to-Install-Plugins-save-project.mp4"
+    },
+    {
+      "type": "text",
+      "html": "<p>Practical 12 - How to export projects</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To Watch Or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2021/12/Practical-12-How-to-export-projects.mp4"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "2197",
+  "title": "Name of the  course",
+  "slug": "name-of-the-course",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Name of the course"
+    },
+    {
+      "type": "heading",
+      "text": "Video 1"
+    },
+    {
+      "type": "button",
+      "text": "Watch or Download",
+      "url": "https://thekingezekiel.com/wp-content/uploads/2022/07/23.-How-to-use-PHONE-Browser-to-access-Facebook-Ads-Manager-.mp4"
+    }
+  ]
+}

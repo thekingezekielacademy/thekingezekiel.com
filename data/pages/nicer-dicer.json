@@ -1,0 +1,53 @@
+{
+  "id": "888",
+  "title": "Nicer Dicer",
+  "slug": "nicer-dicer",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Nicer Dicer"
+    },
+    {
+      "type": "heading",
+      "text": "Features"
+    },
+    {
+      "type": "text",
+      "html": "<p>\u2022 Kitchen Helper:<br />Made from Food-Grade stainless steel &amp; BPA-Free ABS plastic offers.It offers all the functionality of multiple appliances with changeable stainless blades.<br />These blades can cut through all kinds of vegetable, grating cheese, slicing potato and cutting fruits, even can create paste-like vegetables or mashed potatoes.<br /><br />\u2022 Storage in the Side:<br />Design with container for the blades to put, not easy to lose blades and don't need spend too much time to find them.<br /><br />\u2022 Save Time and Money:<br />With this kitchen cutting kit, you can save 70% time, say bye to watery eyes when slicing onions; And helps you prepare food more elegantly.</p>"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2021/09/mainimage0kitchen-shredder-Veget-slicer-cutter-Fruit-Slicer-Grater-Shredders-Drain-Basket-Slicers-8-In-1-Gadgets.jpg"
+    },
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\"><span style=\"color: #ff0000;\"><del>Actual Price: \u20a615,000</del></span></p><p style=\"text-align: center;\">New Price: \u20a612,500</p>"
+    },
+    {
+      "type": "button",
+      "text": "Order Via WhatsApp",
+      "url": "https://wa.link/wru97z"
+    },
+    {
+      "type": "heading",
+      "text": "Product Video"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\"><span style=\"color: #ff0000;\"><del>Actual Price: \u20a615,000</del></span></p><p style=\"text-align: center;\">New Price: \u20a612,500</p>"
+    },
+    {
+      "type": "button",
+      "text": "Order Via WhatsApp",
+      "url": "https://wa.link/wru97z"
+    },
+    {
+      "type": "heading",
+      "text": "Place Order"
+    }
+  ]
+}

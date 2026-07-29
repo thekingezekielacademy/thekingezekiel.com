@@ -1,0 +1,32 @@
+{
+  "id": "2332",
+  "title": "K.E Free Training",
+  "slug": "k-e-free-training",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "ONLINE FREE TRAINING  with King Ezekiel"
+    },
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\">My name is <strong>King Ezekiel</strong>(brand name). <strong>Olugbode Oluwaseyi Ezekiel</strong> is my full name.\u00a0<br />I am a freelancer, a web designer, a full-stack web developer and a digital marketer etc.</p><p>I have an Advanced Diploma In Software Engineering,<br />I have sold hundreds of physical products online and sold thousands of my courses online,<br />I have trained over 200 students PHYSICALLY and more than ten thousand students online.<br />Spent over 2 million Naira of my own money on ads and advertised for top companies in Nigeria.<br /><br /></p>"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2022/08/3.png"
+    },
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\">OUTLINE\u00a0</p><ul><li style=\"text-align: left;\">The rule of NUMBERS</li><li style=\"text-align: left;\">Doing things right away</li><li style=\"text-align: left;\">The King Ezekiel's Simple Sales Funnel</li><li style=\"text-align: left;\">The writeUp</li><li style=\"text-align: left;\">Inflation Rate EXPLAINED!</li><li style=\"text-align: left;\">Edu-Sell</li><li style=\"text-align: left;\">Hot selling products || Finding your niche</li><li style=\"text-align: left;\">AND MANY MORE</li></ul>"
+    },
+    {
+      "type": "button",
+      "text": "Join THE whatsapp free training group",
+      "url": "https://chat.whatsapp.com/LwpjlYtJXAoE6RNROfOx96"
+    },
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\"><strong>JOIN AND ALSO GET 10 FREE PRACTICAL VIDEOS</strong></p>"
+    }
+  ]
+}

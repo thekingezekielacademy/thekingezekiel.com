@@ -1,0 +1,53 @@
+{
+  "id": "2205",
+  "title": "Men\\'s Accessories",
+  "slug": "mens-accessories",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Men's Accessories"
+    },
+    {
+      "type": "heading",
+      "text": "Features & Benefits"
+    },
+    {
+      "type": "text",
+      "html": "<p>Makes you look exclusive<br />Makes you look smart<br />Create a nice coperate look<br />Very affordable<br />Reflects professionalism <br />Freedom to select colours<br />Choice of style</p>"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2022/07/O1CN011g7glS1j8Q9v26X9r_2888794503-0-cib.jpg"
+    },
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\"><span style=\"color: #ff0000;\"><del>Actual Price: 27,000</del></span><br />New Price: 23,000</p>"
+    },
+    {
+      "type": "button",
+      "text": "oRDER vIA wHATSAPP",
+      "url": "https://wa.link/d822rq"
+    },
+    {
+      "type": "heading",
+      "text": "Watch Video"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "heading",
+      "text": "Place Your Order"
+    },
+    {
+      "type": "text",
+      "html": "<p style=\"text-align: center;\"><span style=\"color: #ff0000;\"><del>Actual Price: 27,000</del></span><br />New Price: 23,000</p>"
+    },
+    {
+      "type": "button",
+      "text": "oRDER vIA wHATSAPP",
+      "url": "https://wa.link/d822rq"
+    }
+  ]
+}

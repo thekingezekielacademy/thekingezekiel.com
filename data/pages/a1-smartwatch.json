@@ -1,0 +1,40 @@
+{
+  "id": "2266",
+  "title": "A1 Smartwatch",
+  "slug": "a1-smartwatch",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "A1 Smartwatch"
+    },
+    {
+      "type": "heading",
+      "text": "Features & Benefits"
+    },
+    {
+      "type": "text",
+      "html": "<p>1st benefit<br />2nd benefit<br />3rd benefit<br />A feature<br />Another feature</p>"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2022/07/mainimage0A1-Smart-Watch-2020-2021-Smartwatch-Bluetooth-call-SIM-card-Watch-for-XIAOMI-HUAWEI-Xiaomi-Watch.jpg"
+    },
+    {
+      "type": "text",
+      "html": "<p><span style=\"color: #ff0000;\"><del>Actual Price: \u20a610,000</del></span><br />New Price: \u20a620,000</p>"
+    },
+    {
+      "type": "button",
+      "text": "Order Via Whatsapp",
+      "url": "https://wa.link/gaatay"
+    },
+    {
+      "type": "heading",
+      "text": "Product Video"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=-P1wIX-aGCU"
+    }
+  ]
+}

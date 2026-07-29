@@ -1,0 +1,75 @@
+{
+  "id": "1128",
+  "title": "Full Package Tutorial",
+  "slug": "full-package-tutorial",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Full Package Tutorial"
+    },
+    {
+      "type": "text",
+      "html": "<p>TOTAL - 58 Videos</p>"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>Web Design</strong></p>"
+    },
+    {
+      "type": "text",
+      "html": "<p>16 Videos</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To See List Of Videos",
+      "url": "https://thekingezekiel.com/web-design/"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>Web Development\u00a0</strong></p>"
+    },
+    {
+      "type": "text",
+      "html": "<p>10 Videos</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To See List Of Videos",
+      "url": "https://thekingezekiel.com/web-development-video-course/"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>Simple Graphic Design</strong></p>"
+    },
+    {
+      "type": "text",
+      "html": "<p>20 Videos</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To See List Of Videos",
+      "url": "https://thekingezekiel.com/canvanovice-to-pro/"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong><span class=\"JsGRdQ\">Professional Facebook And Instagram Ads</span></strong></p>"
+    },
+    {
+      "type": "text",
+      "html": "<p>12 Videos</p>"
+    },
+    {
+      "type": "button",
+      "text": "Click To See List Of Videos",
+      "url": "https://thekingezekiel.com/on-phone-fb-ig-ads/"
+    },
+    {
+      "type": "heading",
+      "text": "I  HAVE OTHER COURSES"
+    },
+    {
+      "type": "text",
+      "html": "<p>I have other courses that might interest you, Click any of the courses you are interested in to LEARN MORE:</p>"
+    }
+  ]
+}

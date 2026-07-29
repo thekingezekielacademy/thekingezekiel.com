@@ -1,0 +1,77 @@
+{
+  "id": "944",
+  "title": "Pancake Mixer & Maker",
+  "slug": "pancake-mixer-maker",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Nicest, Easiest and Fastest Way To Make Your Pancakes and Batter."
+    },
+    {
+      "type": "text",
+      "html": "<p>Fast And Easy</p><p>Manual\u00a0</p><p>Less oil &amp; butter</p><p>Durable</p><p>Neatly prepared</p><p>Easy flipping</p>"
+    },
+    {
+      "type": "button",
+      "text": "Order Via WhatsApp",
+      "url": "https://wa.link/z60l21"
+    },
+    {
+      "type": "heading",
+      "text": "Why You Should Buy From Us"
+    },
+    {
+      "type": "heading",
+      "text": "A Few Testimonials From Our Previous Sales"
+    },
+    {
+      "type": "carousel",
+      "images": [
+        "/wp-content/uploads/2021/09/Screenshot_20210826-142749.jpg",
+        "/wp-content/uploads/2021/09/Screenshot_20210826-142839.jpg"
+      ]
+    },
+    {
+      "type": "text",
+      "html": "<p><strong><span style=\"color: #ff0000;\"><del>Original Price: \u20a625,000</del></span><br />New Price: \u20a618,000</strong></p>"
+    },
+    {
+      "type": "button",
+      "text": "Order Via WhatsApp",
+      "url": "https://wa.link/z60l21"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2021/09/46554294_47c3a1d3-e5c7-47f4-845d-81a3ed11bc41-1-5d6ade0228c04bc047a73bda02e78485_1600x1777.jpg"
+    },
+    {
+      "type": "heading",
+      "text": "+"
+    },
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2021/09/mainimage0Manual-Pancake-Machine-Mixer-Crepe-Machine-Practical-Pancake-Machine-Tool-for-Delicious-Breakfast-Fast-Pancake-Maker.jpeg"
+    },
+    {
+      "type": "carousel",
+      "images": [
+        "/wp-content/uploads/2021/09/41d5b1891dda36c7b23b8e824bae8e67-1.jpg",
+        "/wp-content/uploads/2021/09/mainimage1Manual-Pancake-Machine-Mixer-Crepe-Machine-Practical-Pancake-Machine-Tool-for-Delicious-Breakfast-Fast-Pancake-Maker.jpeg",
+        "/wp-content/uploads/2021/09/46554294_47c3a1d3-e5c7-47f4-845d-81a3ed11bc41-1-5d6ade0228c04bc047a73bda02e78485_1600x1777.jpg",
+        "/wp-content/uploads/2021/09/mainimage0Manual-Pancake-Machine-Mixer-Crepe-Machine-Practical-Pancake-Machine-Tool-for-Delicious-Breakfast-Fast-Pancake-Maker-1.jpeg"
+      ]
+    },
+    {
+      "type": "text",
+      "html": "<ul><li><strong><span style=\"color: #000000;\">Non stick Pancake Pan is the no-spatula way of cooking perfect evenly cooked pancakes,sunny side ups, omelettes and crepes!</span></strong></li><li><strong><span style=\"color: #000000;\"> Make 4 perfect pancakes at the same time! </span></strong></li><li><strong><span style=\"color: #000000;\">Non-stick material - which means you won't have to cook with all that butter and oil! Four batter slots.</span></strong></li><li><span style=\"color: #800000;\"><strong><span style=\"color: #000000;\"> You can cook more than just pancakes! Cook four eggs with perfect yolks every time and four perfectly</span> <span style=\"color: #000000;\">sized breakfast sandwich. </span></strong></span></li><li><strong><span style=\"color: #000000;\">Two Sided Pan.\u00a0</span></strong></li></ul>"
+    },
+    {
+      "type": "heading",
+      "text": "Pancake Maker + Mixer Order Form"
+    },
+    {
+      "type": "text",
+      "html": "<p>Place an order for the Non Sticky Air Stir Fry Pan here. Quick and easy.</p>"
+    }
+  ]
+}

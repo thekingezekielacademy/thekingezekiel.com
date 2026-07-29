@@ -1,0 +1,55 @@
+{
+  "id": "353",
+  "title": "Canva(Novice To Pro)-4",
+  "slug": "canvanovice-to-pro-4",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Canva(Novice To Pro)"
+    },
+    {
+      "type": "text",
+      "html": "<p><span style=\"text-decoration: underline;\"><strong>Part4</strong></span></p>"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>Bonus1. Animation Video Creation</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>Bonus2. Background Removal</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>Bonus3. Book Cover Design &amp; Mockup</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>Bonus4. Mock-up</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>Bonus5. Simple Logo Creation</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    }
+  ]
+}

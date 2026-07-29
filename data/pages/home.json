@@ -1,0 +1,1384 @@
+{
+  "id": "5855",
+  "title": "Home",
+  "slug": "home",
+  "source": "gutenberg",
+  "blocks": [
+    {
+      "type": "template-part",
+      "props": {}
+    },
+    {
+      "type": "raw_html",
+      "props": {
+        "html": "\\n\\n"
+      }
+    },
+    {
+      "type": "group",
+      "props": {},
+      "children": [
+        {
+          "type": "raw_html",
+          "props": {
+            "html": "\\n<main class=\\\"wp-block-group\\\" style=\\\"margin-top:0\\\">"
+          }
+        },
+        {
+          "type": "group",
+          "props": {},
+          "children": [
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n<div class=\\\"wp-block-group alignfull\\\" style=\\\"padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)\\\">"
+              }
+            },
+            {
+              "type": "group",
+              "props": {},
+              "children": [
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n<div class=\\\"wp-block-group\\\">"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "props": {
+                    "html": "\\n<h1 class=\\\"wp-block-heading has-text-align-center has-x-large-font-size\\\">Empowering minds, building global standout digital skills.</h1>\\n",
+                    "text": "\\nEmpowering minds, building global standout digital skills.\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "props": {
+                    "html": "\\n<p class=\\\"has-text-align-center\\\"></p>\\n",
+                    "text": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "spacer",
+                  "props": {
+                    "html": "\\n<div style=\\\"height:1.25rem\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                    "text": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "props": {
+                    "html": "\\n<p class=\\\"has-text-align-center\\\"><strong>Where Minds Awaken, Skills Excel\u2014Learn, Lead, and Dominate in the Digital Age.</strong></p>\\n",
+                    "text": "\\nWhere Minds Awaken, Skills Excel\u2014Learn, Lead, and Dominate in the Digital Age.\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "spacer",
+                  "props": {
+                    "html": "\\n<div style=\\\"height:1.25rem\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                    "text": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "buttons",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-buttons\\\">"
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-button\\\"><a class=\\\"wp-block-button__link wp-element-button\\\" href=\\\"https://thekingezekiel.com/courses/\\\">OUR COURSES</a></div>\\n",
+                        "text": "\\nOUR COURSES\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "</div>\\n"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n\\n"
+              }
+            },
+            {
+              "type": "spacer",
+              "props": {
+                "html": "\\n<div style=\\\"height:var(--wp--preset--spacing--30)\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                "text": "\\n\\n"
+              }
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n\\n"
+              }
+            },
+            {
+              "type": "image",
+              "props": {
+                "html": "\\n<figure class=\\\"wp-block-image alignwide size-full is-style-rounded\\\"><img src=\\\"https://thekingezekiel.com/wp-content/uploads/2025/05/group-young-people-sitting-conference-together-scaled.jpg\\\" alt=\\\"\\\" class=\\\"wp-image-5862\\\"/></figure>\\n",
+                "text": "\\n\\n"
+              }
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "</div>\\n"
+              }
+            }
+          ]
+        },
+        {
+          "type": "raw_html",
+          "props": {
+            "html": "\\n\\n"
+          }
+        },
+        {
+          "type": "group",
+          "props": {},
+          "children": [
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n<div class=\\\"wp-block-group alignfull has-base-2-background-color has-background\\\" style=\\\"margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)\\\">"
+              }
+            },
+            {
+              "type": "group",
+              "props": {},
+              "children": [
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n<div class=\\\"wp-block-group\\\">"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "props": {
+                    "html": "\\n<h2 class=\\\"wp-block-heading has-text-align-center is-style-asterisk\\\">Also share a Passion for Providing Marketing Solutions</h2>\\n",
+                    "text": "\\nAlso share a Passion for Providing Marketing Solutions\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "spacer",
+                  "props": {
+                    "html": "\\n<div style=\\\"height:0px\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                    "text": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "props": {
+                    "html": "\\n<p class=\\\"has-text-align-center\\\">Our comprehensive suite of digital marketing services empowers brands, startups, and entrepreneurs to grow, engage, and thrive in the modern digital world.</p>\\n",
+                    "text": "\\nOur comprehensive suite of digital marketing services empowers brands, startups, and entrepreneurs to grow, engage, and thrive in the modern digital world.\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "</div>\\n"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n\\n"
+              }
+            },
+            {
+              "type": "spacer",
+              "props": {
+                "html": "\\n<div style=\\\"margin-top:0;margin-bottom:0;height:var(--wp--preset--spacing--40)\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                "text": "\\n\\n"
+              }
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n\\n"
+              }
+            },
+            {
+              "type": "columns",
+              "props": {},
+              "children": [
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n<div class=\\\"wp-block-columns alignwide\\\">"
+                  }
+                },
+                {
+                  "type": "column",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-column\\\">"
+                      }
+                    },
+                    {
+                      "type": "heading",
+                      "props": {
+                        "html": "\\n<h3 class=\\\"wp-block-heading has-text-align-left is-style-asterisk has-body-font-family has-medium-font-size\\\" style=\\\"font-style:normal;font-weight:600\\\">Marketing Strategy &amp; Consulting</h3>\\n",
+                        "text": "\\nMarketing Strategy &amp; Consulting\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "props": {
+                        "html": "\\n<p class=\\\"has-text-align-left\\\">Transform your vision into a clear, data-backed strategy.<br>Experience the blend of creativity and precision with expert digital consulting.</p>\\n",
+                        "text": "\\nTransform your vision into a clear, data-backed strategy.Experience the blend of creativity and precision with expert digital consulting.\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "column",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-column\\\">"
+                      }
+                    },
+                    {
+                      "type": "heading",
+                      "props": {
+                        "html": "\\n<h3 class=\\\"wp-block-heading has-text-align-left is-style-asterisk has-body-font-family has-medium-font-size\\\" style=\\\"font-style:normal;font-weight:600\\\"><strong>Brand Development</strong></h3>\\n",
+                        "text": "\\nBrand Development\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "props": {
+                        "html": "\\n<p class=\\\"has-text-align-left\\\">Shape how the world sees you.<br>From identity to messaging \u2014 build a brand that stands out and connects deeply.</p>\\n",
+                        "text": "\\nShape how the world sees you.From identity to messaging \u2014 build a brand that stands out and connects deeply.\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "column",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-column\\\">"
+                      }
+                    },
+                    {
+                      "type": "heading",
+                      "props": {
+                        "html": "\\n<h3 class=\\\"wp-block-heading has-text-align-left is-style-asterisk has-body-font-family has-medium-font-size\\\" style=\\\"font-style:normal;font-weight:600\\\"><strong>Social Media Growth</strong></h3>\\n",
+                        "text": "\\nSocial Media Growth\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "props": {
+                        "html": "\\n<p class=\\\"has-text-align-left\\\">Turn your platforms into communities.<br>We create content that drives engagement, builds trust, and converts followers into fans.</p>\\n",
+                        "text": "\\nTurn your platforms into communities.We create content that drives engagement, builds trust, and converts followers into fans.\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "</div>\\n"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n\\n"
+              }
+            },
+            {
+              "type": "spacer",
+              "props": {
+                "html": "\\n<div style=\\\"height:var(--wp--preset--spacing--20)\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                "text": "\\n\\n"
+              }
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n\\n"
+              }
+            },
+            {
+              "type": "columns",
+              "props": {},
+              "children": [
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n<div class=\\\"wp-block-columns alignwide\\\">"
+                  }
+                },
+                {
+                  "type": "column",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-column\\\">"
+                      }
+                    },
+                    {
+                      "type": "heading",
+                      "props": {
+                        "html": "\\n<h3 class=\\\"wp-block-heading has-text-align-left is-style-asterisk has-body-font-family has-medium-font-size\\\" style=\\\"font-style:normal;font-weight:600\\\">Paid Advertising</h3>\\n",
+                        "text": "\\nPaid Advertising\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "props": {
+                        "html": "\\n<p class=\\\"has-text-align-left\\\">Reach the right people, the right way.<br>From Facebook and Google Ads to full-funnel strategy \u2014 we manage campaigns that deliver measurable results.</p>\\n",
+                        "text": "\\nReach the right people, the right way.From Facebook and Google Ads to full-funnel strategy \u2014 we manage campaigns that deliver measurable results.\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "column",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-column\\\">"
+                      }
+                    },
+                    {
+                      "type": "heading",
+                      "props": {
+                        "html": "\\n<h3 class=\\\"wp-block-heading has-text-align-left is-style-asterisk has-body-font-family has-medium-font-size\\\" style=\\\"font-style:normal;font-weight:600\\\"><strong>Email &amp; Automation Systems</strong></h3>\\n",
+                        "text": "\\nEmail &amp; Automation Systems\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "props": {
+                        "html": "\\n<p class=\\\"has-text-align-left\\\">Build relationships that scale.<br>From lead nurturing to conversion-focused automations, we help your marketing work while you sleep.</p>\\n",
+                        "text": "\\nBuild relationships that scale.From lead nurturing to conversion-focused automations, we help your marketing work while you sleep.\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "column",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-column\\\">"
+                      }
+                    },
+                    {
+                      "type": "heading",
+                      "props": {
+                        "html": "\\n<h3 class=\\\"wp-block-heading has-text-align-left is-style-asterisk has-body-font-family has-medium-font-size\\\" style=\\\"font-style:normal;font-weight:600\\\"><strong>Continuous Support</strong></h3>\\n",
+                        "text": "\\nContinuous Support\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "props": {
+                        "html": "\\n<p class=\\\"has-text-align-left\\\">You\u2019re never alone on your growth journey.<br>Our team offers ongoing optimization, analysis, and guidance to keep your business thriving.</p>\\n",
+                        "text": "\\nYou\u2019re never alone on your growth journey.Our team offers ongoing optimization, analysis, and guidance to keep your business thriving.\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "</div>\\n"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "</div>\\n"
+              }
+            }
+          ]
+        },
+        {
+          "type": "raw_html",
+          "props": {
+            "html": "\\n\\n"
+          }
+        },
+        {
+          "type": "group",
+          "props": {},
+          "children": [
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n<div class=\\\"wp-block-group alignfull\\\" style=\\\"margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)\\\">"
+              }
+            },
+            {
+              "type": "group",
+              "props": {},
+              "children": [
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n<div class=\\\"wp-block-group alignwide\\\">"
+                  }
+                },
+                {
+                  "type": "group",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-group\\\">"
+                      }
+                    },
+                    {
+                      "type": "heading",
+                      "props": {
+                        "html": "\\n<h2 class=\\\"wp-block-heading has-text-align-center is-style-asterisk\\\">Problems &amp; Solutions</h2>\\n",
+                        "text": "\\nProblems &amp; Solutions\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "props": {
+                        "html": "\\n<p class=\\\"has-text-align-center\\\">Are You Facing These Digital Marketing Challenges?</p>\\n",
+                        "text": "\\nAre You Facing These Digital Marketing Challenges?\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "spacer",
+                  "props": {
+                    "html": "\\n<div style=\\\"height:var(--wp--preset--spacing--40)\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                    "text": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "columns",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-columns alignwide\\\">"
+                      }
+                    },
+                    {
+                      "type": "column",
+                      "props": {},
+                      "children": [
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "\\n<div class=\\\"wp-block-column is-vertically-aligned-center\\\" style=\\\"flex-basis:40%\\\">"
+                          }
+                        },
+                        {
+                          "type": "paragraph",
+                          "props": {
+                            "html": "\\n<p class=\\\"has-large-font-size\\\">Problems</p>\\n",
+                            "text": "\\nProblems\\n"
+                          }
+                        },
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "\\n\\n"
+                          }
+                        },
+                        {
+                          "type": "list",
+                          "props": {
+                            "html": "\\n<ul style=\\\"line-height:1.75\\\" class=\\\"wp-block-list is-style-checkmark-list\\\"><!-- wp:list-item -->\\n<li>Struggling to generate quality leads online?</li>\\n<!-- /wp:list-item -->\\n\\n<!-- wp:list-item -->\\n<li>Falling behind competitors in online visibility?</li>\\n<!-- /wp:list-item -->\\n\\n<!-- wp:list-item -->\\n<li>Lack of a clear digital marketing strategy?</li>\\n<!-- /wp:list-item -->\\n\\n<!-- wp:list-item -->\\n<li>Website not converting visitors into customers?</li>\\n<!-- /wp:list-item --></ul>\\n",
+                            "text": "\\n\\nStruggling to generate quality leads online?\\n\\n\\n\\nFalling behind competitors in online visibility?\\n\\n\\n\\nLack of a clear digital marketing strategy?\\n\\n\\n\\nWebsite not converting visitors into customers?\\n\\n"
+                          }
+                        },
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "</div>\\n"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "column",
+                      "props": {},
+                      "children": [
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "\\n<div class=\\\"wp-block-column\\\" style=\\\"flex-basis:50%\\\">"
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "props": {
+                            "html": "\\n<figure class=\\\"wp-block-image size-full is-style-rounded\\\"><img src=\\\"https://thekingezekiel.com/wp-content/uploads/2025/05/Gemini_Generated_Image_phnlwbphnlwbphnl.png\\\" alt=\\\"\\\" class=\\\"wp-image-6182\\\"/></figure>\\n",
+                            "text": "\\n\\n"
+                          }
+                        },
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "</div>\\n"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "spacer",
+                  "props": {
+                    "html": "\\n<div style=\\\"height:var(--wp--preset--spacing--40)\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                    "text": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "columns",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-columns alignwide\\\">"
+                      }
+                    },
+                    {
+                      "type": "column",
+                      "props": {},
+                      "children": [
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "\\n<div class=\\\"wp-block-column\\\" style=\\\"flex-basis:50%\\\">"
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "props": {
+                            "html": "\\n<figure class=\\\"wp-block-image size-full is-style-rounded\\\"><img src=\\\"https://thekingezekiel.com/wp-content/uploads/2025/05/Gemini_Generated_Image_neuot8neuot8neuo.png\\\" alt=\\\"\\\" class=\\\"wp-image-6183\\\"/></figure>\\n",
+                            "text": "\\n\\n"
+                          }
+                        },
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "</div>\\n"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "column",
+                      "props": {},
+                      "children": [
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "\\n<div class=\\\"wp-block-column is-vertically-aligned-center\\\" style=\\\"flex-basis:40%\\\">"
+                          }
+                        },
+                        {
+                          "type": "heading",
+                          "props": {
+                            "html": "\\n<h3 class=\\\"wp-block-heading is-style-default\\\">Solutions</h3>\\n",
+                            "text": "\\nSolutions\\n"
+                          }
+                        },
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "\\n\\n"
+                          }
+                        },
+                        {
+                          "type": "list",
+                          "props": {
+                            "html": "\\n<ul style=\\\"line-height:1.75\\\" class=\\\"wp-block-list is-style-checkmark-list\\\"><!-- wp:list-item -->\\n<li>I offer <strong>clear strategies</strong> and <strong>expert guidance</strong> for your business growth.</li>\\n<!-- /wp:list-item -->\\n\\n<!-- wp:list-item -->\\n<li>Case I use a <strong>data-driven approach</strong> to deliver <strong>tailored, results-oriented strategies</strong>. </li>\\n<!-- /wp:list-item -->\\n\\n<!-- wp:list-item -->\\n<li><strong><a href=\\\"https://wa.link/hf5j06\\\">Contact Me</a></strong></li>\\n<!-- /wp:list-item --></ul>\\n",
+                            "text": "\\n\\nI offer clear strategies and expert guidance for your business growth.\\n\\n\\n\\nCase I use a data-driven approach to deliver tailored, results-oriented strategies. \\n\\n\\n\\nContact Me\\n\\n"
+                          }
+                        },
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "</div>\\n"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "</div>\\n"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "</div>\\n"
+              }
+            }
+          ]
+        },
+        {
+          "type": "raw_html",
+          "props": {
+            "html": "\\n\\n"
+          }
+        },
+        {
+          "type": "group",
+          "props": {},
+          "children": [
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n<div class=\\\"wp-block-group alignfull has-base-color has-contrast-background-color has-text-color has-background\\\" style=\\\"margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)\\\">"
+              }
+            },
+            {
+              "type": "group",
+              "props": {},
+              "children": [
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n<div class=\\\"wp-block-group\\\">"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "props": {
+                    "html": "\\n<p class=\\\"has-text-align-center has-base-color has-text-color has-heading-font-family has-x-large-font-size\\\" style=\\\"line-height:1.2\\\">Digital Marketing is a thing of the present and of the future, and as long as we use digital devices, we will always need it.</p>\\n",
+                    "text": "\\nDigital Marketing is a thing of the present and of the future, and as long as we use digital devices, we will always need it.\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "props": {
+                    "html": "\\n<p>.</p>\\n",
+                    "text": "\\n.\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "props": {
+                    "html": "\\n<p class=\\\"has-text-align-center has-base-color has-text-color has-heading-font-family has-x-large-font-size\\\" style=\\\"line-height:1.2\\\">It isn\\'t just a trend; it\\'s fundamentally integrated into how we live and do business today</p>\\n",
+                    "text": "\\nIt isn\\'t just a trend; it\\'s fundamentally integrated into how we live and do business today\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "spacer",
+                  "props": {
+                    "html": "\\n<div style=\\\"height:16px\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                    "text": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "group",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-group\\\">"
+                      }
+                    },
+                    {
+                      "type": "gallery",
+                      "props": {},
+                      "children": [
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "\\n<figure class=\\\"wp-block-gallery aligncenter has-nested-images columns-default is-cropped\\\">"
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "props": {
+                            "html": "\\n<figure class=\\\"wp-block-image size-thumbnail has-custom-border\\\"><img src=\\\"https://thekingezekiel.com/wp-content/uploads/2025/05/IMG_0971-copy-1-150x150.jpg\\\" alt=\\\"\\\" class=\\\"wp-image-5906\\\" style=\\\"border-radius:1000px\\\"/></figure>\\n",
+                            "text": "\\n\\n"
+                          }
+                        },
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "</figure>\\n"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "props": {
+                        "html": "\\n<p class=\\\"has-text-align-center\\\" style=\\\"margin-top:var(--wp--preset--spacing--10);margin-bottom:0\\\">King Ezekiel</p>\\n",
+                        "text": "\\nKing Ezekiel\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "props": {
+                        "html": "\\n<p class=\\\"has-text-align-center has-contrast-3-color has-text-color has-small-font-size\\\" style=\\\"font-style:normal;font-weight:300\\\">CEO, The King Ezekiel Academy</p>\\n",
+                        "text": "\\nCEO, The King Ezekiel Academy\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "</div>\\n"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "</div>\\n"
+              }
+            }
+          ]
+        },
+        {
+          "type": "raw_html",
+          "props": {
+            "html": "\\n\\n"
+          }
+        },
+        {
+          "type": "group",
+          "props": {},
+          "children": [
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n<div class=\\\"wp-block-group alignfull\\\" style=\\\"margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)\\\">"
+              }
+            },
+            {
+              "type": "heading",
+              "props": {
+                "html": "\\n<h2 class=\\\"wp-block-heading alignwide has-x-large-font-size\\\" style=\\\"margin-top:0;margin-bottom:var(--wp--preset--spacing--40);line-height:1\\\">Watch, Read, Listen</h2>\\n",
+                "text": "\\nWatch, Read, Listen\\n"
+              }
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n\\n"
+              }
+            },
+            {
+              "type": "group",
+              "props": {},
+              "children": [
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n<div class=\\\"wp-block-group alignwide\\\">"
+                  }
+                },
+                {
+                  "type": "query",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-query alignwide\\\">"
+                      }
+                    },
+                    {
+                      "type": "post-template",
+                      "props": {},
+                      "children": [
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "\\n"
+                          }
+                        },
+                        {
+                          "type": "separator",
+                          "props": {
+                            "html": "\\n<hr class=\\\"wp-block-separator has-text-color has-contrast-3-color has-alpha-channel-opacity has-contrast-3-background-color has-background alignwide is-style-wide\\\"/>\\n",
+                            "text": "\\n\\n"
+                          }
+                        },
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "\\n\\n"
+                          }
+                        },
+                        {
+                          "type": "columns",
+                          "props": {},
+                          "children": [
+                            {
+                              "type": "raw_html",
+                              "props": {
+                                "html": "\\n<div class=\\\"wp-block-columns alignwide are-vertically-aligned-center\\\" style=\\\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20)\\\">"
+                              }
+                            },
+                            {
+                              "type": "column",
+                              "props": {},
+                              "children": [
+                                {
+                                  "type": "raw_html",
+                                  "props": {
+                                    "html": "\\n<div class=\\\"wp-block-column is-vertically-aligned-center\\\" style=\\\"flex-basis:72%\\\">"
+                                  }
+                                },
+                                {
+                                  "type": "post-title",
+                                  "props": {}
+                                },
+                                {
+                                  "type": "raw_html",
+                                  "props": {
+                                    "html": "</div>\\n"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "raw_html",
+                              "props": {
+                                "html": "\\n\\n"
+                              }
+                            },
+                            {
+                              "type": "column",
+                              "props": {},
+                              "children": [
+                                {
+                                  "type": "raw_html",
+                                  "props": {
+                                    "html": "\\n<div class=\\\"wp-block-column is-vertically-aligned-center\\\" style=\\\"flex-basis:28%\\\">"
+                                  }
+                                },
+                                {
+                                  "type": "template-part",
+                                  "props": {}
+                                },
+                                {
+                                  "type": "raw_html",
+                                  "props": {
+                                    "html": "</div>\\n"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "raw_html",
+                              "props": {
+                                "html": "</div>\\n"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "raw_html",
+                          "props": {
+                            "html": "\\n"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "spacer",
+                      "props": {
+                        "html": "\\n<div style=\\\"height:var(--wp--preset--spacing--30)\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                        "text": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "query-pagination",
+                      "props": {
+                        "html": "\\n<!-- wp:query-pagination-previous /-->\\n\\n<!-- wp:query-pagination-numbers /-->\\n\\n<!-- wp:query-pagination-next /-->\\n",
+                        "text": "\\n\\n\\n\\n\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "query-no-results",
+                      "props": {
+                        "html": "\\n<!-- wp:paragraph -->\\n<p>No posts were found.</p>\\n<!-- /wp:paragraph -->\\n",
+                        "text": "\\n\\nNo posts were found.\\n\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "</div>\\n"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "</div>\\n"
+              }
+            }
+          ]
+        },
+        {
+          "type": "raw_html",
+          "props": {
+            "html": "\\n\\n"
+          }
+        },
+        {
+          "type": "group",
+          "props": {},
+          "children": [
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "\\n<div class=\\\"wp-block-group alignfull\\\" style=\\\"margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)\\\">"
+              }
+            },
+            {
+              "type": "group",
+              "props": {},
+              "children": [
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n<div class=\\\"wp-block-group alignwide has-base-2-background-color has-background\\\" style=\\\"border-radius:16px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)\\\">"
+                  }
+                },
+                {
+                  "type": "spacer",
+                  "props": {
+                    "html": "\\n<div style=\\\"height:var(--wp--preset--spacing--10)\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                    "text": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "props": {
+                    "html": "\\n<h2 class=\\\"wp-block-heading has-text-align-center has-x-large-font-size\\\">Join 900+ students</h2>\\n",
+                    "text": "\\nJoin 900+ students\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "props": {
+                    "html": "\\n<p class=\\\"has-text-align-center\\\">Stay in the loop with everything you need to know.</p>\\n",
+                    "text": "\\nStay in the loop with everything you need to know.\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "buttons",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-buttons\\\">"
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "props": {
+                        "html": "\\n<div class=\\\"wp-block-button\\\"><a class=\\\"wp-block-button__link wp-element-button\\\">Sign up</a></div>\\n",
+                        "text": "\\nSign up\\n"
+                      }
+                    },
+                    {
+                      "type": "raw_html",
+                      "props": {
+                        "html": "</div>\\n"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "spacer",
+                  "props": {
+                    "html": "\\n<div style=\\\"height:var(--wp--preset--spacing--10)\\\" aria-hidden=\\\"true\\\" class=\\\"wp-block-spacer\\\"></div>\\n",
+                    "text": "\\n\\n"
+                  }
+                },
+                {
+                  "type": "raw_html",
+                  "props": {
+                    "html": "</div>\\n"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "raw_html",
+              "props": {
+                "html": "</div>\\n"
+              }
+            }
+          ]
+        },
+        {
+          "type": "raw_html",
+          "props": {
+            "html": "</main>\\n"
+          }
+        }
+      ]
+    },
+    {
+      "type": "raw_html",
+      "props": {
+        "html": "\\n\\n"
+      }
+    },
+    {
+      "type": "template-part",
+      "props": {}
+    }
+  ]
+}

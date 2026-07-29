@@ -1,0 +1,23 @@
+{
+  "id": "11",
+  "title": "About",
+  "slug": "about",
+  "blocks": [
+    {
+      "type": "image",
+      "url": "/wp-content/uploads/2025/05/IMG_0971-copy-1-scaled.jpg"
+    },
+    {
+      "type": "heading",
+      "text": "King Ezekiel"
+    },
+    {
+      "type": "text",
+      "html": "<p>Digital Marketer &amp; Digital Marketing Consultant</p>"
+    },
+    {
+      "type": "text",
+      "html": "<p>Feel free to connect if you're looking to scale your digital presence or need expert guidance.</p>"
+    }
+  ]
+}

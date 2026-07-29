@@ -1,0 +1,55 @@
+{
+  "id": "330",
+  "title": "Canva(Novice To Pro)-2",
+  "slug": "canvanovice-to-pro-2",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Canva(Novice To Pro)"
+    },
+    {
+      "type": "text",
+      "html": "<p><span style=\"text-decoration: underline;\"><strong>PART2</strong></span></p>"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>6. Instagram Posts(Caurosel)(From Scratch)</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>7. Magazine Cover(From Scratch)</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>8. Wallpaper(From Scratch)</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>9. Poster(From Scratch)</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    },
+    {
+      "type": "text",
+      "html": "<p><strong>10. Letterhead(From Scratch)</strong></p>"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+    }
+  ]
+}

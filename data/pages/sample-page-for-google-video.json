@@ -1,0 +1,15 @@
+{
+  "id": "6047",
+  "title": "Sample Page for Google Course2",
+  "slug": "sample-page-for-google-video",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Our company is a collective of amazing people striving to build delightful products."
+    },
+    {
+      "type": "text",
+      "html": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.</p>"
+    }
+  ]
+}
