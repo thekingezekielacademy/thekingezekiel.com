@@ -23,6 +23,7 @@ export const HeroSection = () => {
             src="/images/hero.jpg"
             alt="King Ezekiel"
             fill
+            sizes="(max-width: 768px) 100vw, 42vw"
             className="object-cover object-center grayscale-[0.2] contrast-125 transition-transform duration-700 group-hover:scale-105"
             priority
           />
