@@ -44,6 +44,14 @@ export default async function DynamicPage({ params }: { params: Promise<{ slug: 
     <main className="min-h-screen bg-portfolio-bg selection:bg-portfolio-gold selection:text-black font-sans">
       <div className="max-w-[1400px] mx-auto border-x border-portfolio-border shadow-2xl bg-portfolio-bg relative flex flex-col min-h-screen">
         
+        {/* Top Notification Bar */}
+        {pageData.notification && (
+          <aside aria-label="Announcement" className="w-full bg-gradient-to-r from-portfolio-gold/20 via-portfolio-gold to-portfolio-gold/20 text-black py-2.5 px-4 text-center font-bold text-xs md:text-sm tracking-wider uppercase flex items-center justify-center gap-2 border-b border-portfolio-gold/40">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse" aria-hidden="true"></span>
+            <span>{pageData.notification}</span>
+          </aside>
+        )}
+
         {/* Global Navigation */}
         <Navbar />
 
