@@ -21,7 +21,7 @@ export const TextContent = ({ html }: { html: string }) => {
 
 export const YouTubePlayer = ({ url }: { url: string }) => {
   let videoId = '';
-  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/);
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([^&?]+)/);
   if (match && match[1]) {
     videoId = match[1];
   } else {
@@ -30,6 +30,8 @@ export const YouTubePlayer = ({ url }: { url: string }) => {
       videoId = `videoseries?list=${playlistMatch[1]}`;
     }
   }
+
+  const isShort = url.includes('/shorts/');
 
   if (!videoId) {
     return (
@@ -40,14 +42,15 @@ export const YouTubePlayer = ({ url }: { url: string }) => {
   }
 
   return (
-    <div className="w-full max-w-5xl my-12">
-      <div className="relative w-full aspect-video border border-portfolio-border bg-portfolio-card rounded-sm overflow-hidden shadow-2xl">
+    <div className={`w-full ${isShort ? 'max-w-md' : 'max-w-5xl'} my-12 flex justify-center`}>
+      <div className={`relative w-full ${isShort ? 'aspect-[9/16] max-h-[640px]' : 'aspect-video'} border border-portfolio-border bg-portfolio-card rounded-sm overflow-hidden shadow-2xl`}>
         <iframe
           src={`https://www.youtube.com/embed/${videoId}`}
           title="YouTube video player"
           className="absolute top-0 left-0 w-full h-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
+          loading="lazy"
         ></iframe>
       </div>
     </div>
@@ -60,14 +63,15 @@ export const ImageCarousel = ({ images }: { images: string[] }) => {
   return (
     <div className="w-full my-12 overflow-x-auto pb-4 snap-x flex gap-4 no-scrollbar">
       {images.map((img, idx) => {
-        const src = img.startsWith('/') ? `https://thekingezekiel.com${img}` : img;
+        const src = img.startsWith('/wp-content') ? `https://thekingezekiel.com${img}` : img;
         return (
           <div key={idx} className="min-w-[80vw] md:min-w-[40vw] lg:min-w-[30vw] aspect-[4/3] relative snap-center rounded-sm overflow-hidden border border-portfolio-border bg-portfolio-card">
             <img 
               src={src} 
-              alt={`Carousel image ${idx + 1}`}
+              alt={`Review testimonial ${idx + 1}`}
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
+              decoding="async"
             />
           </div>
         );
@@ -78,7 +82,7 @@ export const ImageCarousel = ({ images }: { images: string[] }) => {
 
 export const ImageBlock = ({ url }: { url: string }) => {
   if (!url) return null;
-  const src = url.startsWith('/') ? `https://thekingezekiel.com${url}` : url;
+  const src = url.startsWith('/wp-content') ? `https://thekingezekiel.com${url}` : url;
   return (
     <div className="w-full max-w-4xl my-12">
       <div className="relative w-full rounded-sm overflow-hidden border border-portfolio-border bg-portfolio-card">
@@ -87,6 +91,7 @@ export const ImageBlock = ({ url }: { url: string }) => {
           alt="Page Image"
           className="w-full h-auto object-contain"
           loading="lazy"
+          decoding="async"
         />
       </div>
     </div>
