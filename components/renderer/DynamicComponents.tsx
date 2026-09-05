@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useRef, useEffect } from 'react';
 
 export const HeroHeading = ({ text }: { text: string }) => {
   return (
@@ -58,24 +60,165 @@ export const YouTubePlayer = ({ url }: { url: string }) => {
 };
 
 export const ImageCarousel = ({ images }: { images: string[] }) => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeModalIdx, setActiveModalIdx] = useState<number | null>(null);
+
   if (!images || images.length === 0) return null;
-  
+
+  const normalizedImages = images.map((img) => 
+    img.startsWith('/wp-content') ? `https://thekingezekiel.com${img}` : img
+  );
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === 'left' ? -550 : 550;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const openModal = (idx: number) => {
+    setActiveModalIdx(idx);
+  };
+
+  const closeModal = () => {
+    setActiveModalIdx(null);
+  };
+
+  const prevModalImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (activeModalIdx !== null) {
+      setActiveModalIdx((activeModalIdx - 1 + normalizedImages.length) % normalizedImages.length);
+    }
+  };
+
+  const nextModalImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (activeModalIdx !== null) {
+      setActiveModalIdx((activeModalIdx + 1) % normalizedImages.length);
+    }
+  };
+
+  // Keyboard navigation for modal
+  useEffect(() => {
+    if (activeModalIdx === null) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') setActiveModalIdx((prev) => (prev !== null ? (prev - 1 + normalizedImages.length) % normalizedImages.length : null));
+      if (e.key === 'ArrowRight') setActiveModalIdx((prev) => (prev !== null ? (prev + 1) % normalizedImages.length : null));
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeModalIdx, normalizedImages.length]);
+
   return (
-    <div className="w-full my-12 overflow-x-auto pb-4 snap-x flex gap-4 no-scrollbar">
-      {images.map((img, idx) => {
-        const src = img.startsWith('/wp-content') ? `https://thekingezekiel.com${img}` : img;
-        return (
-          <div key={idx} className="min-w-[80vw] md:min-w-[40vw] lg:min-w-[30vw] aspect-[4/3] relative snap-center rounded-sm overflow-hidden border border-portfolio-border bg-portfolio-card">
+    <div className="w-full my-12 relative">
+      {/* Navigation Buttons for Desktop */}
+      <div className="hidden md:flex justify-end gap-3 mb-4 pr-2">
+        <button
+          onClick={() => scroll('left')}
+          aria-label="Previous review"
+          className="w-10 h-10 rounded-full border border-portfolio-border bg-portfolio-card text-white hover:border-portfolio-gold hover:text-portfolio-gold flex items-center justify-center transition-colors cursor-pointer"
+        >
+          &#8592;
+        </button>
+        <button
+          onClick={() => scroll('right')}
+          aria-label="Next review"
+          className="w-10 h-10 rounded-full border border-portfolio-border bg-portfolio-card text-white hover:border-portfolio-gold hover:text-portfolio-gold flex items-center justify-center transition-colors cursor-pointer"
+        >
+          &#8594;
+        </button>
+      </div>
+
+      {/* Carousel Track */}
+      <div 
+        ref={scrollRef}
+        className="w-full overflow-x-auto pb-6 snap-x flex gap-5 no-scrollbar items-center scroll-smooth"
+      >
+        {normalizedImages.map((src, idx) => (
+          <div 
+            key={idx} 
+            onClick={() => openModal(idx)}
+            className="flex-none w-[88vw] sm:w-[540px] md:w-[680px] snap-center rounded-sm overflow-hidden border border-portfolio-border bg-portfolio-card p-3 shadow-2xl transition-all duration-300 hover:border-portfolio-gold/70 cursor-zoom-in group relative"
+          >
             <img 
               src={src} 
               alt={`Review testimonial ${idx + 1}`}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="w-full h-auto object-contain rounded-sm block mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
               loading="lazy"
               decoding="async"
             />
+            <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-portfolio-gold/40 text-portfolio-gold px-2.5 py-1 rounded text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow-lg">
+              <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                <path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/>
+              </svg>
+              <span>Click to view full image</span>
+            </div>
           </div>
-        );
-      })}
+        ))}
+      </div>
+
+      {/* Swipe/Scroll hint */}
+      <p className="text-center text-xs tracking-widest uppercase text-portfolio-muted/70 mt-2 font-mono flex items-center justify-center gap-2">
+        <span>←</span>
+        <span>Swipe or scroll to see all {normalizedImages.length} reviews · Click any image to view in full size</span>
+        <span>→</span>
+      </p>
+
+      {/* Full-Screen Lightbox Modal */}
+      {activeModalIdx !== null && (
+        <div 
+          onClick={closeModal}
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 md:p-8 animate-fadeIn"
+          role="dialog"
+          aria-modal="true"
+        >
+          {/* Close button */}
+          <button
+            onClick={closeModal}
+            aria-label="Close modal"
+            className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-2xl font-light transition-colors z-50 cursor-pointer"
+          >
+            &times;
+          </button>
+
+          {/* Previous image button */}
+          <button
+            onClick={prevModalImage}
+            aria-label="Previous image"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-portfolio-gold hover:text-black text-white flex items-center justify-center text-xl transition-all z-50 cursor-pointer"
+          >
+            &#8592;
+          </button>
+
+          {/* Next image button */}
+          <button
+            onClick={nextModalImage}
+            aria-label="Next image"
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-portfolio-gold hover:text-black text-white flex items-center justify-center text-xl transition-all z-50 cursor-pointer"
+          >
+            &#8594;
+          </button>
+
+          {/* Modal Image container */}
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="max-w-5xl max-h-[90vh] w-full flex flex-col items-center"
+          >
+            <img 
+              src={normalizedImages[activeModalIdx]} 
+              alt={`Full review testimonial ${activeModalIdx + 1}`}
+              className="max-w-full max-h-[82vh] w-auto h-auto object-contain rounded border border-portfolio-border shadow-2xl"
+            />
+            <div className="mt-4 flex items-center gap-4 text-xs font-mono text-portfolio-muted">
+              <span>Review {activeModalIdx + 1} of {normalizedImages.length}</span>
+              <span>·</span>
+              <span>Press ESC to close</span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
