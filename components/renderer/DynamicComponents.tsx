@@ -248,6 +248,20 @@ export const ActionButton = ({ text, url }: { text: string, url: string }) => {
     url.includes('whatsapp.com') || 
     text.toLowerCase().includes('whatsapp');
 
+  const lowerText = text.toLowerCase();
+  const shouldTrackLead = 
+    lowerText === 'buy via whatsapp' || 
+    lowerText === 'join whatsapp community' || 
+    lowerText === 'get yours now';
+
+  const handleClick = () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (shouldTrackLead && typeof window !== 'undefined' && (window as any).fbq) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any).fbq('track', 'Lead');
+    }
+  };
+
   if (isWhatsApp) {
     return (
       <div className="my-8 flex justify-center w-full">
@@ -255,6 +269,7 @@ export const ActionButton = ({ text, url }: { text: string, url: string }) => {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleClick}
           className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm md:text-base tracking-[0.08em] uppercase transition-all shadow-[0_0_25px_rgba(37,211,102,0.35)] hover:shadow-[0_0_35px_rgba(37,211,102,0.6)] rounded-sm group transform hover:-translate-y-0.5"
         >
           <svg className="w-5 h-5 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24">
@@ -272,6 +287,7 @@ export const ActionButton = ({ text, url }: { text: string, url: string }) => {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleClick}
         className="inline-block px-8 py-4 bg-portfolio-gold text-black font-semibold text-sm tracking-[0.1em] uppercase hover:bg-white transition-colors rounded-sm"
       >
         {text}
