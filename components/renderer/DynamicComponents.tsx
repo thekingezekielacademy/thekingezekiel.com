@@ -258,7 +258,7 @@ export const ActionButton = ({ text, url }: { text: string, url: string }) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if (shouldTrackLead && typeof window !== 'undefined' && (window as any).fbq) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (window as any).fbq('track', 'Lead');
+      (window as any).fbq('track', 'Contact');
     }
   };
 
