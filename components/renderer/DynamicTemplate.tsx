@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroHeading, TextContent, YouTubePlayer, ImageCarousel, ImageBlock, ActionButton } from './DynamicComponents';
+import { HeroHeading, TextContent, YouTubePlayer, ImageCarousel, ImageBlock, ActionButton, AccordionBlock } from './DynamicComponents';
 
 export const DynamicTemplate = ({ blocks }: { blocks: any[] }) => {
   if (!blocks || blocks.length === 0) {
@@ -43,6 +43,9 @@ export const DynamicTemplate = ({ blocks }: { blocks: any[] }) => {
             
           case 'button':
             return <ActionButton key={index} text={block.text} url={block.url} />;
+
+          case 'accordion':
+            return <AccordionBlock key={index} items={block.items} />;
 
           default:
             // Ignore unknown block types silently in production

@@ -316,3 +316,46 @@ export const ActionButton = ({ text, url }: { text: string, url: string }) => {
     </div>
   );
 };
+
+export const AccordionBlock = ({ items }: { items: { title: string, youtubeUrl?: string, html?: string }[] }) => {
+  const [openIndex, setOpenIndex] = useState<number>(0);
+
+  if (!items || items.length === 0) return null;
+
+  return (
+    <div className="w-full max-w-4xl my-12 flex flex-col gap-4">
+      {items.map((item, idx) => {
+        const isOpen = openIndex === idx;
+        return (
+          <div key={idx} className="border border-portfolio-border bg-portfolio-card rounded-sm overflow-hidden">
+            <button
+              onClick={() => setOpenIndex(isOpen ? -1 : idx)}
+              className="w-full text-left p-5 md:p-6 flex items-center justify-between hover:bg-portfolio-border/30 transition-colors focus:outline-none focus:ring-2 focus:ring-portfolio-gold/50"
+            >
+              <h3 className="text-lg md:text-xl font-serif font-bold text-white pr-4 leading-tight">{item.title}</h3>
+              <div className={`shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${isOpen ? 'border-portfolio-gold text-portfolio-gold bg-portfolio-gold/10 rotate-180' : 'border-portfolio-muted text-portfolio-muted hover:border-portfolio-gold hover:text-portfolio-gold'}`}>
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </button>
+            <div 
+              className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
+            >
+              <div className="p-5 md:p-6 pt-0 border-t border-portfolio-border/50">
+                {item.youtubeUrl && (
+                  <div className="-my-12">
+                     <YouTubePlayer url={item.youtubeUrl} />
+                  </div>
+                )}
+                {item.html && (
+                  <div className="prose prose-invert max-w-none text-portfolio-muted mt-4" dangerouslySetInnerHTML={{ __html: item.html }} />
+                )}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};

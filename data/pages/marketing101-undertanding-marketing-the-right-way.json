@@ -50,36 +50,25 @@
       "html": "<div class=\"space-y-6\"><h3 class=\"text-xl md:text-2xl font-serif text-white font-bold\">FINALLY, A MARKETING CLASS YOU CAN UNDERSTAND!</h3><p class=\"text-base text-portfolio-muted leading-relaxed\"><strong class=\"text-white\">YOU DON’T NEED TO BE A MARKETER OR TO BE THE SMARTEST TO UNDERSTAND MARKETING.</strong><br />Whether you sell products, services, courses, build apps, or run a business… <strong class=\"text-portfolio-gold\">YOU NEED TO UNDERSTAND MARKETING!</strong></p><p class=\"text-base text-portfolio-muted leading-relaxed\">Just Marketing. From Scratch. No complicated theories. No confusing jargon. Marketing made simple. Here is what you will learn depending on what you do:</p><div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 mt-6\"><div class=\"p-5 rounded-sm border border-portfolio-border bg-portfolio-card\"><h4 class=\"text-white font-bold text-base mb-1.5 flex items-center gap-2\"><span>&#128640;</span> Startup Founders &amp; Builders</h4><p class=\"text-sm text-portfolio-muted leading-relaxed\">You'll learn how to discover where the money is and validate market demand before spending your time, energy, and capital building a product nobody wants.</p></div><div class=\"p-5 rounded-sm border border-portfolio-border bg-portfolio-card\"><h4 class=\"text-white font-bold text-base mb-1.5 flex items-center gap-2\"><span>&#128161;</span> Experts &amp; Experienced Marketers</h4><p class=\"text-sm text-portfolio-muted leading-relaxed\">If you feel something is missing or you’ve been taught marketing the wrong way, you’ll learn the true foundation and first principles of marketing so you can finally understand and apply it the right way.</p></div><div class=\"p-5 rounded-sm border border-portfolio-border bg-portfolio-card\"><h4 class=\"text-white font-bold text-base mb-1.5 flex items-center gap-2\"><span>&#128230;</span> Physical Product Sellers &amp; Importers</h4><p class=\"text-sm text-portfolio-muted leading-relaxed\">You'll learn how to know what will actually sell and confirm if a market is truly worth entering before you risk your money buying or importing inventory.</p></div><div class=\"p-5 rounded-sm border border-portfolio-border bg-portfolio-card\"><h4 class=\"text-white font-bold text-base mb-1.5 flex items-center gap-2\"><span>&#128188;</span> Service Providers &amp; Freelancers</h4><p class=\"text-sm text-portfolio-muted leading-relaxed\">You'll learn how to communicate the value of what you do so the right clients understand your worth, see why they need you, and choose you over everyone else.</p></div><div class=\"p-5 rounded-sm border border-portfolio-border bg-portfolio-card\"><h4 class=\"text-white font-bold text-base mb-1.5 flex items-center gap-2\"><span>&#127891;</span> Course Creators &amp; Digital Entrepreneurs</h4><p class=\"text-sm text-portfolio-muted leading-relaxed\">You'll learn how to uncover genuine customer desires, test ideas before creating content, and connect your offer with people who are already eager to buy.</p></div><div class=\"p-5 rounded-sm border border-portfolio-border bg-portfolio-card\"><h4 class=\"text-white font-bold text-base mb-1.5 flex items-center gap-2\"><span>&#127775;</span> Beginners of Any Age</h4><p class=\"text-sm text-portfolio-muted leading-relaxed\">Even if you have zero marketing background, you'll learn the 4 core questions (WHO, WHAT, HOW, WHY) behind every successful sale without any confusing jargon or complex theories.</p></div></div></div>"
     },
     {
-      "type": "heading",
-      "text": "Why Are You Teaching The Basics Instead Of Advanced Stuff?"
-    },
-    {
-      "type": "youtube",
-      "url": "https://youtu.be/gQirJoVkCYI"
-    },
-    {
-      "type": "heading",
-      "text": "Why Is It So Affordable?"
-    },
-    {
-      "type": "youtube",
-      "url": "https://youtu.be/_1kfNgXmClI"
-    },
-    {
-      "type": "heading",
-      "text": "Who is King Ezekiel(our coach)?"
-    },
-    {
-      "type": "youtube",
-      "url": "https://youtu.be/8LZxGNR8fGQ"
-    },
-    {
-      "type": "heading",
-      "text": "Where Am I Learning?"
-    },
-    {
-      "type": "youtube",
-      "url": "https://youtu.be/kZz1Fw_TvX4"
+      "type": "accordion",
+      "items": [
+        {
+          "title": "Why Are You Teaching The Basics Instead Of Advanced Stuff?",
+          "youtubeUrl": "https://youtu.be/gQirJoVkCYI"
+        },
+        {
+          "title": "Why Is It So Affordable?",
+          "youtubeUrl": "https://youtu.be/_1kfNgXmClI"
+        },
+        {
+          "title": "Who is King Ezekiel(our coach)?",
+          "youtubeUrl": "https://youtu.be/8LZxGNR8fGQ"
+        },
+        {
+          "title": "Where Am I Learning?",
+          "youtubeUrl": "https://youtu.be/kZz1Fw_TvX4"
+        }
+      ]
     },
     {
       "type": "heading",
