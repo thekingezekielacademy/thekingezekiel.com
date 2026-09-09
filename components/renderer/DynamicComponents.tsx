@@ -22,6 +22,8 @@ export const TextContent = ({ html }: { html: string }) => {
 };
 
 export const YouTubePlayer = ({ url }: { url: string }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   let videoId = '';
   const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([^&?]+)/);
   if (match && match[1]) {
@@ -45,15 +47,34 @@ export const YouTubePlayer = ({ url }: { url: string }) => {
 
   return (
     <div className={`w-full ${isShort ? 'max-w-md' : 'max-w-5xl'} my-12 flex justify-center`}>
-      <div className={`relative w-full ${isShort ? 'aspect-[9/16] max-h-[640px]' : 'aspect-video'} border border-portfolio-border bg-portfolio-card rounded-sm overflow-hidden shadow-2xl`}>
-        <iframe
-          src={`https://www.youtube.com/embed/${videoId}`}
-          title="YouTube video player"
-          className="absolute top-0 left-0 w-full h-full"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          loading="lazy"
-        ></iframe>
+      <div 
+        className={`relative w-full ${isShort ? 'aspect-[9/16] max-h-[640px]' : 'aspect-video'} border border-portfolio-border bg-portfolio-card rounded-sm overflow-hidden shadow-2xl group cursor-pointer`}
+        onClick={() => setIsPlaying(true)}
+      >
+        {!isPlaying ? (
+          <>
+            <img 
+              src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`} 
+              alt="Video Thumbnail" 
+              className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+            />
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-portfolio-gold rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-110 group-hover:shadow-[0_0_40px_rgba(212,175,55,0.6)] transition-all">
+                <svg className="w-8 h-8 md:w-10 md:h-10 text-black translate-x-1" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+          </>
+        ) : (
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`}
+            title="YouTube video player"
+            className="absolute top-0 left-0 w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        )}
       </div>
     </div>
   );
