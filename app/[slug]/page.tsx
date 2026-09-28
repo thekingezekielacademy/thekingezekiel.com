@@ -94,6 +94,9 @@ function HiddenCourseBundlePage() {
       <div className="mx-auto max-w-[1200px] border-x border-portfolio-border bg-portfolio-bg px-4 py-10 sm:px-6 md:px-10 lg:px-12">
         <header className="mb-10 text-center">
           <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.28em] text-portfolio-gold sm:text-xs">
+            FULL ACCESS
+          </p>
+          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.28em] text-portfolio-gold sm:text-xs">
             PRACTICAL AI + AUTOMATION COURSE
           </p>
           <h1 className="text-3xl font-bold leading-none tracking-[-0.04em] text-white sm:text-4xl md:text-5xl lg:text-[4rem]">
@@ -144,19 +147,6 @@ function HiddenCourseBundlePage() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-[24px] border border-portfolio-border bg-[linear-gradient(135deg,_rgba(212,175,55,0.08),_rgba(17,17,17,1))] p-6 text-center">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-portfolio-gold sm:text-xs">
-            SOURCE LINK
-          </p>
-          <a
-            href="https://www.thekingezekiel.com/5-courses-for-1500"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="mt-4 inline-flex items-center justify-center rounded-xl border border-portfolio-gold bg-portfolio-gold px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-black transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e7c75c]"
-          >
-            COPY DESIGN
-          </a>
-        </div>
       </div>
     </main>
   );
