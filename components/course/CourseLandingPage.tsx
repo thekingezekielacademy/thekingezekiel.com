@@ -116,21 +116,23 @@ function VideoSection() {
           <div className="relative aspect-video w-full bg-black">
             <iframe
               id="course-preview-video"
-              className="absolute inset-0 h-full w-full"
-              src="https://www.youtube-nocookie.com/embed/qrNpaTaC0FQ?autoplay=1&mute=1&playsinline=1&controls=1&enablejsapi=1&rel=0"
+              className="pointer-events-none absolute inset-0 h-full w-full"
+              tabIndex={-1}
+              src="https://www.youtube-nocookie.com/embed/qrNpaTaC0FQ?autoplay=1&mute=1&playsinline=1&controls=0&disablekb=1&enablejsapi=1&rel=0&loop=1&playlist=qrNpaTaC0FQ"
               title="AI Business Automation and Monetization course preview"
               allow="autoplay; encrypted-media; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
             />
-            <button
-              type="button"
-              onClick={toggleMute}
-              aria-label={isMuted ? "Unmute course preview video" : "Mute course preview video"}
-              className="absolute bottom-4 right-4 z-10 rounded-full border border-portfolio-gold bg-black/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-portfolio-gold shadow-lg backdrop-blur transition-colors hover:bg-portfolio-gold hover:text-black focus:outline-none focus:ring-2 focus:ring-portfolio-gold focus:ring-offset-2 focus:ring-offset-black"
-            >
-              {isMuted ? "Unmute video" : "Mute video"}
-            </button>
+            <div className="absolute inset-0 z-10 flex items-center justify-center">
+              <button
+                type="button"
+                onClick={toggleMute}
+                aria-label={isMuted ? "Unmute course preview video" : "Mute course preview video"}
+                className="rounded-full border-2 border-portfolio-gold bg-portfolio-gold px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-black shadow-[0_0_36px_rgba(212,175,55,0.55)] transition-all duration-200 hover:scale-105 hover:bg-[#e7c75c] focus:outline-none focus:ring-4 focus:ring-white/70"
+              >
+                {isMuted ? "Unmute video" : "Mute video"}
+              </button>
+            </div>
           </div>
         </div>
       </div>
