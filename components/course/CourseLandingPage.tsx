@@ -84,6 +84,22 @@ function Hero() {
 }
 
 function VideoSection() {
+  const [isMuted, setIsMuted] = useState(true);
+
+  function toggleMute() {
+    const player = document.getElementById("course-preview-video") as HTMLIFrameElement | null;
+
+    player?.contentWindow?.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: isMuted ? "unMute" : "mute",
+        args: [],
+      }),
+      "https://www.youtube-nocookie.com",
+    );
+    setIsMuted(!isMuted);
+  }
+
   return (
     <section aria-label="Course preview video" className="py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -97,21 +113,24 @@ function VideoSection() {
         </div>
 
         <div className="relative overflow-hidden rounded-[28px] border border-portfolio-border bg-portfolio-card shadow-2xl">
-          <div className="relative aspect-video w-full bg-[linear-gradient(135deg,_rgba(212,175,55,0.12),_rgba(37,99,235,0.08),_rgba(17,17,17,1))]">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.03),_transparent_55%)]" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-portfolio-gold bg-portfolio-gold/10 text-portfolio-gold shadow-[0_0_30px_rgba(212,175,55,0.28)]">
-                  <span className="text-3xl">▶</span>
-                </div>
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-portfolio-gold">
-                  VIDEO COMING SOON
-                </p>
-                <p className="mt-2 max-w-md px-6 text-sm text-portfolio-muted">
-                  Replace this placeholder with your promo or course video when it is ready.
-                </p>
-              </div>
-            </div>
+          <div className="relative aspect-video w-full bg-black">
+            <iframe
+              id="course-preview-video"
+              className="absolute inset-0 h-full w-full"
+              src="https://www.youtube-nocookie.com/embed/qrNpaTaC0FQ?autoplay=1&mute=1&playsinline=1&controls=1&enablejsapi=1&rel=0"
+              title="AI Business Automation and Monetization course preview"
+              allow="autoplay; encrypted-media; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+            <button
+              type="button"
+              onClick={toggleMute}
+              aria-label={isMuted ? "Unmute course preview video" : "Mute course preview video"}
+              className="absolute bottom-4 right-4 z-10 rounded-full border border-portfolio-gold bg-black/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-portfolio-gold shadow-lg backdrop-blur transition-colors hover:bg-portfolio-gold hover:text-black focus:outline-none focus:ring-2 focus:ring-portfolio-gold focus:ring-offset-2 focus:ring-offset-black"
+            >
+              {isMuted ? "Unmute video" : "Mute video"}
+            </button>
           </div>
         </div>
       </div>
@@ -280,56 +299,53 @@ export default function CourseLandingPage() {
   const modules = [
     {
       number: "1",
-      title: "Communicate With AI",
-      description: "Learn how to communicate with AI to get better, more useful results.",
+      title: "WhatsApp Automation",
+      description: "Automate WhatsApp conversations, including voice-note understanding and keyword-based replies.",
       points: [
-        "Giving AI clear instructions",
-        "Getting better responses",
-        "Using AI for business, content and research",
-        "Creating reusable AI instructions and workflows",
+        "Responding to customer voice notes",
+        "Sending automatic replies based on keywords",
+        "Automating messages and customer conversations",
+        "Handling common questions faster",
       ],
     },
     {
       number: "2",
-      title: "Build AI-Powered Bots & Assistants",
-      description: "Create bots that can communicate with customers and handle repetitive tasks.",
+      title: "Facebook & Instagram Automation",
+      description: "Automate social posting and customer interactions across Facebook and Instagram.",
       points: [
-        "Creating a Telegram bot",
-        "Connecting bots to AI",
-        "Giving your bot business knowledge",
-        "Automating customer questions and responses",
-        "Building simple AI assistants",
+        "Scheduling and automatically publishing posts",
+        "Auto-replying to messages",
+        "Automating comment replies",
+        "Managing customer interactions",
       ],
     },
     {
       number: "3",
-      title: "Social Media Automation",
-      description: "Automate customer interactions across WhatsApp, Facebook and Instagram.",
+      title: "Telegram Bots & AI Assistants",
+      description: "Build helpful bots and AI assistants that can answer questions and handle repetitive tasks.",
       points: [
-        "Automated Instagram interactions",
-        "Automated Facebook interactions",
-        "Automated WhatsApp communication",
-        "Automated replies and messages",
-        "Automating customer conversations",
-        "Using InstantDM where relevant",
+        "Creating a Telegram bot and connecting it to AI",
+        "Giving your assistant useful business knowledge",
+        "Communicating with AI clearly to get better results",
+        "Automating answers to common questions",
+        "Building practical AI assistants",
       ],
     },
     {
       number: "4",
-      title: "AI Video Clipping & Editing",
-      description: "Use AI to turn long-form videos into engaging short-form content faster.",
+      title: "AI Video Clipping, Editing & Auto-Posting (Scheduling)",
+      description: "Turn longer videos into polished short-form content and schedule it to publish automatically.",
       points: [
-        "AI video clipping",
-        "Automatic editing",
-        "Creating short-form content",
-        "Repurposing existing videos",
-        "Saving time on video production",
+        "Automatically clipping long videos",
+        "Editing clips for short-form platforms",
+        "Repurposing existing video content",
+        "Scheduling and automatically posting videos",
       ],
     },
     {
       number: "5",
-      title: "VIBE CODING WITH AI",
-      description: "Use AI to design and build websites and applications without having to write everything manually from scratch.",
+      title: "Vibe Coding with AI",
+      description: "Use AI to design and build websites and applications without writing everything from scratch.",
       points: [
         "Website design with AI",
         "Front-end development",
@@ -341,16 +357,24 @@ export default function CourseLandingPage() {
     },
     {
       number: "6",
-      title: "Business Automation & Monetization",
-      description: "Use AI and automation to simplify business operations — or turn your skills into income.",
+      title: "Business Automation",
+      description: "Use AI and automation to simplify everyday business operations and customer workflows.",
       points: [
         "Automating repetitive business tasks",
-        "Automated customer replies",
-        "Automated customer follow-ups",
+        "Streamlining customer replies and follow-ups",
         "Lead management",
         "Simple business workflows",
-        "AI & automation services you can sell",
-        "Turning automation skills into income",
+      ],
+    },
+    {
+      number: "7",
+      title: "Full Monetization",
+      description: "Turn practical AI and automation skills into services, products and new income opportunities.",
+      points: [
+        "Choosing services to offer with your skills",
+        "Packaging AI and automation solutions for clients",
+        "Finding ways to earn from what you learn",
+        "Building income opportunities around digital skills",
       ],
       accent: true,
     },
@@ -428,7 +452,7 @@ export default function CourseLandingPage() {
             <div className="mt-12 rounded-[24px] border border-portfolio-border bg-[linear-gradient(90deg,_rgba(212,175,55,0.05),_rgba(37,99,235,0.05))] p-6 sm:p-8">
               <div className="grid gap-4 text-center sm:grid-cols-2 lg:grid-cols-4">
                 {[
-                  ["6-IN-1 PRACTICAL COURSE", ""],
+                  ["7-IN-1 PRACTICAL COURSE", ""],
                   ["45+ PRACTICAL VIDEOS", ""],
                   ["LIFETIME ACCESS", ""],
                   ["SUPPORT GROUP", ""],

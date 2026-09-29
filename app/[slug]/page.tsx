@@ -53,8 +53,7 @@ function HiddenCourseBundlePage() {
     {
       title: 'WHATSAPP AUTOMATION',
       subtitle: 'Automate replies, messages, comments and customer interactions.',
-      href: '#',
-      isDisabled: true,
+      href: 'https://www.youtube.com/playlist?list=PLSQqShcvhT5Y',
     },
     {
       title: 'TELEGRAM AUTOMATION & AI ASSISTANT',
@@ -77,10 +76,9 @@ function HiddenCourseBundlePage() {
       href: 'https://www.youtube.com/playlist?list=PLJgVUrDMslzVRr_hfwyxpvqUpt22yzojT',
     },
     {
-      title: 'AUTO-CLIPPING & AUTO-EDITING',
+      title: 'AI VIDEO AUTO CLIPPING, EDITING & POSTING(SCHEDULING)',
       subtitle: 'Turn long videos into engaging short-form content faster.',
-      href: '#',
-      isDisabled: true,
+      href: 'https://www.youtube.com/playlist?list=PLBkgEpssuZ8s',
     },
     {
       title: 'FREELANCING - THE $50M UNTAPPED MARKET',
@@ -124,24 +122,14 @@ function HiddenCourseBundlePage() {
               </p>
 
               <div className="mt-6">
-                {item.isDisabled ? (
-                  <button
-                    type="button"
-                    aria-disabled="true"
-                    className="inline-flex w-full cursor-not-allowed items-center justify-center rounded-xl border border-portfolio-border bg-portfolio-bg px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-portfolio-muted opacity-70"
-                  >
-                    WATCH THIS COURSE
-                  </button>
-                ) : (
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="inline-flex w-full items-center justify-center rounded-xl border border-portfolio-gold bg-portfolio-gold px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-black transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e7c75c] focus:outline-none focus:ring-2 focus:ring-portfolio-gold focus:ring-offset-2 focus:ring-offset-portfolio-bg"
-                  >
-                    WATCH THIS COURSE
-                  </a>
-                )}
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex w-full items-center justify-center rounded-xl border border-portfolio-gold bg-portfolio-gold px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-black transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e7c75c] focus:outline-none focus:ring-2 focus:ring-portfolio-gold focus:ring-offset-2 focus:ring-offset-portfolio-bg"
+                >
+                  WATCH THIS COURSE
+                </a>
               </div>
             </article>
           ))}
