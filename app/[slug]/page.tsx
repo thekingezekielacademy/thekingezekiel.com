@@ -51,7 +51,7 @@ export async function generateStaticParams() {
 function HiddenCourseBundlePage() {
   const courseItems = [
     {
-      title: 'WHATSAPP AUTOMATION',
+      title: 'WHATSAPP AUTOMATION + PRO FACEBOOK ADS',
       subtitle: 'Automate replies, messages, comments and customer interactions.',
       href: 'https://www.youtube.com/playlist?list=PLSQqShcvhT5Y',
     },

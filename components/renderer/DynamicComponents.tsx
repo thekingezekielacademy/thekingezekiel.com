@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useId } from 'react';
 
 export const HeroHeading = ({ text }: { text: string }) => {
   return (
@@ -21,8 +21,31 @@ export const TextContent = ({ html }: { html: string }) => {
   );
 };
 
-export const YouTubePlayer = ({ url }: { url: string }) => {
+export const YouTubePlayer = ({ url, playbackGroup }: { url: string; playbackGroup?: string }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const playerRef = useRef<HTMLDivElement>(null);
+  const playerId = useId();
+  const hasCoordinatedControls = Boolean(playbackGroup);
+
+  useEffect(() => {
+    if (!playbackGroup) return;
+
+    const handleOtherPlayerStart = (event: Event) => {
+      const detail = (event as CustomEvent<{ group: string; playerId: string }>).detail;
+      if (detail.group !== playbackGroup || detail.playerId === playerId) return;
+
+      iframeRef.current?.contentWindow?.postMessage(
+        JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }),
+        'https://www.youtube.com',
+      );
+      setIsPlaying(false);
+    };
+
+    document.addEventListener('youtube-course-player-start', handleOtherPlayerStart);
+    return () => document.removeEventListener('youtube-course-player-start', handleOtherPlayerStart);
+  }, [playbackGroup, playerId]);
 
   let videoId = '';
   const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([^&?]+)/);
@@ -37,6 +60,41 @@ export const YouTubePlayer = ({ url }: { url: string }) => {
 
   const isShort = url.includes('/shorts/');
 
+  const startPlayback = () => {
+    setHasStarted(true);
+    setIsPlaying(true);
+    if (playbackGroup) {
+      document.dispatchEvent(new CustomEvent('youtube-course-player-start', {
+        detail: { group: playbackGroup, playerId },
+      }));
+    }
+  };
+
+  const togglePlayback = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    if (!hasStarted || !isPlaying) {
+      if (hasStarted) {
+        iframeRef.current?.contentWindow?.postMessage(
+          JSON.stringify({ event: 'command', func: 'playVideo', args: [] }),
+          'https://www.youtube.com',
+        );
+      }
+      startPlayback();
+      return;
+    }
+
+    iframeRef.current?.contentWindow?.postMessage(
+      JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }),
+      'https://www.youtube.com',
+    );
+    setIsPlaying(false);
+  };
+
+  const enterFullscreen = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    playerRef.current?.requestFullscreen();
+  };
+
   if (!videoId) {
     return (
       <a href={url} target="_blank" rel="noopener noreferrer" className="block w-full max-w-5xl my-12 p-6 border border-portfolio-gold/30 bg-portfolio-card text-portfolio-gold hover:bg-portfolio-gold hover:text-black transition-colors text-center font-mono text-sm tracking-widest uppercase">
@@ -47,11 +105,12 @@ export const YouTubePlayer = ({ url }: { url: string }) => {
 
   return (
     <div className={`w-full ${isShort ? 'max-w-md' : 'max-w-5xl'} my-12 flex justify-center`}>
-      <div 
+      <div
+        ref={playerRef}
         className={`relative w-full ${isShort ? 'aspect-[9/16] max-h-[640px]' : 'aspect-video'} border border-portfolio-border bg-portfolio-card rounded-sm overflow-hidden shadow-2xl group cursor-pointer`}
-        onClick={() => setIsPlaying(true)}
+        onClick={hasCoordinatedControls ? () => !hasStarted && startPlayback() : () => setIsPlaying(true)}
       >
-        {!isPlaying ? (
+        {(!isPlaying && (!hasCoordinatedControls || !hasStarted)) ? (
           <>
             <img 
               src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`} 
@@ -66,15 +125,47 @@ export const YouTubePlayer = ({ url }: { url: string }) => {
               </div>
             </div>
           </>
-        ) : (
+        ) : null}
+        {(hasCoordinatedControls ? hasStarted : isPlaying) ? (
           <iframe
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`}
+            ref={iframeRef}
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&controls=${hasCoordinatedControls ? 0 : 1}&enablejsapi=${hasCoordinatedControls ? 1 : 0}&modestbranding=1&rel=0`}
             title="YouTube video player"
             className="absolute top-0 left-0 w-full h-full"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share; fullscreen"
             allowFullScreen
           ></iframe>
-        )}
+        ) : null}
+        {hasCoordinatedControls ? (
+          <>
+            <button
+              type="button"
+              onClick={enterFullscreen}
+              aria-label="Watch video fullscreen"
+              title="Watch fullscreen"
+              className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded bg-black/75 text-white transition-colors hover:bg-black focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m13-5v3a2 2 0 0 1-2 2h-3" />
+              </svg>
+            </button>
+            {hasStarted ? (
+              <button
+                type="button"
+                onClick={togglePlayback}
+                aria-label={isPlaying ? 'Pause video' : 'Play video'}
+                title={isPlaying ? 'Pause video' : 'Play video'}
+                className="absolute bottom-3 left-3 z-20 flex h-10 w-10 items-center justify-center rounded bg-black/75 text-white transition-colors hover:bg-black focus:outline-none focus:ring-2 focus:ring-white"
+              >
+                {isPlaying ? (
+                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM15 5h4v14h-4z" /></svg>
+                ) : (
+                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+                )}
+              </button>
+            ) : null}
+          </>
+        ) : null}
       </div>
     </div>
   );
@@ -84,9 +175,7 @@ export const ImageCarousel = ({ images }: { images: string[] }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeModalIdx, setActiveModalIdx] = useState<number | null>(null);
 
-  if (!images || images.length === 0) return null;
-
-  const normalizedImages = images.map((img) => 
+  const normalizedImages = (images ?? []).map((img) =>
     img.startsWith('/wp-content') ? `https://thekingezekiel.com${img}` : img
   );
 
@@ -130,6 +219,8 @@ export const ImageCarousel = ({ images }: { images: string[] }) => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activeModalIdx, normalizedImages.length]);
+
+  if (!images || images.length === 0) return null;
 
   return (
     <div className="w-full my-12 relative">

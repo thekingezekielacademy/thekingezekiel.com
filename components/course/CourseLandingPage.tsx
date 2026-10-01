@@ -167,7 +167,7 @@ function CourseModule({
           : "border-portfolio-border bg-portfolio-card"
       }`}
     >
-      <YouTubePlayer url={videoUrl} />
+      <YouTubePlayer url={videoUrl} playbackGroup="automation-course" />
       <div className="mb-4 flex items-center gap-3">
         <div className="flex h-10 w-10 items-center justify-center rounded-full border border-portfolio-gold bg-portfolio-gold/10 text-sm font-semibold text-portfolio-gold">
           {number}
@@ -308,7 +308,7 @@ export default function CourseLandingPage() {
   const modules = [
     {
       number: "1",
-      title: "WhatsApp Automation",
+      title: "WhatsApp Automation + Pro Facebook Ads",
       subtitle: "Stop losing customers because you couldn’t reply on time. Turn your WhatsApp into a 24/7 sales machine.",
       videoUrl: "https://youtu.be/OuleCVoKp7o",
       points: [
