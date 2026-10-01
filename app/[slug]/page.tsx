@@ -56,9 +56,9 @@ function HiddenCourseBundlePage() {
       href: 'https://www.youtube.com/playlist?list=PLSQqShcvhT5Y',
     },
     {
-      title: 'TELEGRAM AUTOMATION & AI ASSISTANT',
+      title: 'AI PERSONAL & BUSINESS ASSISTANT',
       subtitle: 'Create bots that can answer questions, assist customers and handle repetitive tasks.',
-      href: 'https://www.youtube.com/playlist?list=PLKCeuVWqmbtE',
+      href: 'https://www.youtube.com/playlist?list=PLNwPfqrAot40',
     },
     {
       title: 'INSTAGRAM & FACEBOOK AUTOMATION',
