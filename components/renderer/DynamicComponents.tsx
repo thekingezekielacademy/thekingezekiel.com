@@ -92,7 +92,11 @@ export const YouTubePlayer = ({ url, playbackGroup }: { url: string; playbackGro
 
   const enterFullscreen = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
-    playerRef.current?.requestFullscreen();
+    if (document.fullscreenElement === playerRef.current) {
+      document.exitFullscreen();
+    } else {
+      playerRef.current?.requestFullscreen();
+    }
   };
 
   if (!videoId) {
@@ -141,8 +145,8 @@ export const YouTubePlayer = ({ url, playbackGroup }: { url: string; playbackGro
             <button
               type="button"
               onClick={enterFullscreen}
-              aria-label="Watch video fullscreen"
-              title="Watch fullscreen"
+              aria-label="Toggle fullscreen"
+              title="Toggle fullscreen"
               className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded bg-black/75 text-white transition-colors hover:bg-black focus:outline-none focus:ring-2 focus:ring-white"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
