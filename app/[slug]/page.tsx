@@ -4,6 +4,7 @@ import path from 'path';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import CourseLandingPage from '../../components/course/CourseLandingPage';
+import AdBuildCommunityLandingPage from '../../components/course/AdBuildCommunityLandingPage';
 import { DynamicTemplate } from '../../components/renderer/DynamicTemplate';
 import { VisionFooter } from '../../components/portfolio/VisionFooter';
 import { Navbar } from '../../components/portfolio/Navbar';
@@ -25,6 +26,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           follow: false,
         },
       },
+    };
+  }
+
+  if (slug === 'ad-build-community') {
+    return {
+      title: '5 Ways Nigerians Monetize Their Skills to Earn N1M to N3M Monthly | B.U.I.L.D Community',
+      description: 'Learn the 5 ways Nigerians monetize their skills to earn ₦1M to ₦3M monthly. Join the B.U.I.L.D Community for ₦3,500.',
     };
   }
 
@@ -150,6 +158,10 @@ export default async function DynamicPage({ params }: { params: Promise<{ slug: 
 
   if (slug === 'for-ad-ai-business-automation-monetization') {
     return <CourseLandingPage />;
+  }
+
+  if (slug === 'ad-build-community') {
+    return <AdBuildCommunityLandingPage />;
   }
 
   if (slug === hiddenSlug) {
