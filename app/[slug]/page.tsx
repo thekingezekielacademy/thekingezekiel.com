@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import CourseLandingPage from '../../components/course/CourseLandingPage';
 import AdBuildCommunityLandingPage from '../../components/course/AdBuildCommunityLandingPage';
+import FiveWaysToEarnOnlineKePage from '../../components/course/FiveWaysToEarnOnlineKePage';
 import { DynamicTemplate } from '../../components/renderer/DynamicTemplate';
 import { VisionFooter } from '../../components/portfolio/VisionFooter';
 import { Navbar } from '../../components/portfolio/Navbar';
@@ -26,6 +27,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           follow: false,
         },
       },
+    };
+  }
+
+  if (slug === '5-ways-to-earn-online-ke') {
+    return {
+      title: '5 Ways to Earn Online | King Ezekiel',
+      description: 'Master Information Marketing, Ebooks, Freelancing, YouTube Monetization, AI Animation, Importation, and choose your specialized skill to start earning online.',
     };
   }
 
@@ -162,6 +170,10 @@ export default async function DynamicPage({ params }: { params: Promise<{ slug: 
 
   if (slug === 'ad-build-community') {
     return <AdBuildCommunityLandingPage />;
+  }
+
+  if (slug === '5-ways-to-earn-online-ke') {
+    return <FiveWaysToEarnOnlineKePage />;
   }
 
   if (slug === hiddenSlug) {
