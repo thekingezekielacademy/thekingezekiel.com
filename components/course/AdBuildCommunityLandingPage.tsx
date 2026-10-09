@@ -103,6 +103,63 @@ function Hero() {
   );
 }
 
+function VideoSection() {
+  const [isMuted, setIsMuted] = useState(true);
+
+  function toggleMute() {
+    const player = document.getElementById("build-preview-video") as HTMLIFrameElement | null;
+
+    player?.contentWindow?.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: isMuted ? "unMute" : "mute",
+        args: [],
+      }),
+      "https://www.youtube-nocookie.com",
+    );
+    setIsMuted(!isMuted);
+  }
+
+  return (
+    <section aria-label="Course preview video" className="py-8 sm:py-10">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-4 text-center">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-portfolio-gold sm:text-xs">
+            WATCH THIS FIRST
+          </p>
+          <p className="mt-3 text-base text-portfolio-muted sm:text-lg">
+            Watch King Ezekiel explain which monetization path best suits you!
+          </p>
+        </div>
+
+        <div className="relative overflow-hidden rounded-[28px] border border-portfolio-border bg-portfolio-card shadow-2xl">
+          <div className="relative aspect-video w-full bg-black">
+            <iframe
+              id="build-preview-video"
+              className="pointer-events-none absolute inset-0 h-full w-full"
+              tabIndex={-1}
+              src="https://www.youtube-nocookie.com/embed/TniI1hTLD3I?start=60&end=3120&autoplay=1&mute=1&playsinline=1&controls=0&disablekb=1&enablejsapi=1&rel=0&loop=1&playlist=TniI1hTLD3I"
+              title="5 Ways Nigerians Monetize Their Skills video preview"
+              allow="autoplay; encrypted-media; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+            <div className="absolute inset-0 z-10 flex items-center justify-center">
+              <button
+                type="button"
+                onClick={toggleMute}
+                aria-label={isMuted ? "Unmute course preview video" : "Mute course preview video"}
+                className="rounded-full border-2 border-portfolio-gold bg-portfolio-gold px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-black shadow-[0_0_36px_rgba(212,175,55,0.55)] transition-all duration-200 hover:scale-105 hover:bg-[#e7c75c] focus:outline-none focus:ring-4 focus:ring-white/70"
+              >
+                {isMuted ? "Unmute video" : "Mute video"}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function WayCard({
   number,
   title,
@@ -180,7 +237,7 @@ function FAQAccordion() {
     },
     {
       q: "How do I pay and get access?",
-      a: "Click the 'BUY VIA WHATSAPP - ₦3,500' button on this page. You'll be connected directly to WhatsApp where you will receive immediate payment details and instant community access.",
+      a: "Click the 'BUY VIA WHATSAPP' button on this page. You'll be connected directly to WhatsApp where you will receive immediate payment details and instant community access.",
     },
   ];
 
@@ -288,10 +345,10 @@ export default function AdBuildCommunityLandingPage() {
       title: "SERVICES: FREELANCING",
       subtitle: "Offer high-demand services to international and local high-paying clients.",
       points: [
-        "Upwork platform mastery",
-        "Untapped Markets: X (Twitter), LinkedIn, Facebook, Instagram & Google",
-        "Proposal drafting like a Professional",
-        "Choose A Skill: Professional Advertising OR Vibe Coding (Full-Stack Web Development With AI)",
+        "Upwork",
+        "Untapped Markets: X, LinkedIn, Facebook, Instagram & Google",
+        "Proposal drafting like A Professional",
+        "Choose A Skill: Professional Advertising or Vibe Coding: Full-Stack Web Development With AI Course",
       ],
       accent: true,
     },
@@ -316,6 +373,8 @@ export default function AdBuildCommunityLandingPage() {
     <main className="min-h-screen bg-portfolio-bg selection:bg-portfolio-gold selection:text-black font-sans">
       <div className="mx-auto max-w-[1400px] border-x border-portfolio-border bg-portfolio-bg p-0 shadow-[0_0_30px_rgba(0,0,0,0.35)]">
         <Hero />
+
+        <VideoSection />
 
         {/* PRICE & CALL TO ACTION BANNER */}
         <section className="py-6 sm:py-8">
@@ -381,13 +440,13 @@ export default function AdBuildCommunityLandingPage() {
                 SPECIAL COMMUNITY BONUS
               </p>
               <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">
-                YOU HAVE NO SKILL? FEAR NOT!
+                YOU HAVE NO SKILL?? FEAR NOT!
               </h2>
               <p className="mx-auto mt-4 max-w-3xl text-lg font-semibold leading-relaxed text-portfolio-fg sm:text-xl">
-                Even if you do not have a skill, you would be taught one! That’s how stubborn we are to see you win!
+                Even if you do not have skill, you would be taught one! That’s how stubborn we are to see you win!
               </p>
               <p className="mt-2 text-base text-portfolio-muted">
-                No theory. No hype. Just high-demand skills you can actually monetize.
+                No theory. No hype. Just a skill you can actually monetize.
               </p>
 
               <div className="mt-8 grid gap-3 text-left sm:grid-cols-2 md:grid-cols-3">
