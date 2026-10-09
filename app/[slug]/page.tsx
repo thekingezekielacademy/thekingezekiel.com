@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (slug === 'ad-build-community') {
     return {
-      title: '5 Ways Nigerians Monetize Their Skills to Earn N1M to N3M Monthly | B.U.I.L.D Community',
-      description: 'Learn the 5 ways Nigerians monetize their skills to earn ₦1M to ₦3M monthly. Join the B.U.I.L.D Community for ₦3,500.',
+      title: '5 Ways Nigerians Monetize Their Skills to Earn N1M to N3M Monthly | King Ezekiel',
+      description: 'Learn the 5 ways Nigerians monetize their skills to earn ₦1M to ₦3M monthly.',
     };
   }
 

@@ -23,7 +23,7 @@ function CTAButton({
       target="_blank"
       rel="noreferrer noopener"
       aria-label={label}
-      className={`inline-flex items-center justify-center gap-2.5 rounded-xl border border-[#25D366] bg-[#25D366] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20bd5a] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-portfolio-bg active:translate-y-0 shadow-[0_0_25px_rgba(37,211,102,0.35)] sm:px-7 sm:py-4 sm:text-sm sm:tracking-[0.16em] ${className}`}
+      className={`inline-flex items-center justify-center gap-2.5 rounded-xl border border-[#25D366] bg-[#25D366] px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20bd5a] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-portfolio-bg active:translate-y-0 shadow-[0_0_25px_rgba(37,211,102,0.35)] sm:px-7 sm:py-4 sm:text-sm sm:tracking-[0.16em] ${className}`}
     >
       <svg className="h-4 w-4 shrink-0 fill-current sm:h-5 sm:w-5" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
@@ -35,43 +35,43 @@ function CTAButton({
 
 function Hero() {
   return (
-    <header className="pt-4 pb-6 sm:pt-10 sm:pb-8 md:pt-12">
-      <div className="mx-auto max-w-6xl px-3 sm:px-6 lg:px-8">
-        <div className="rounded-[22px] sm:rounded-[28px] border border-portfolio-border bg-[radial-gradient(circle_at_top,_rgba(212,175,55,0.16),_transparent_45%)] p-4 sm:p-8 md:p-10 lg:p-12">
+    <header className="pt-8 pb-8 sm:pt-10 md:pt-12">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-[28px] border border-portfolio-border bg-[radial-gradient(circle_at_top,_rgba(212,175,55,0.16),_transparent_45%)] p-6 sm:p-8 md:p-10 lg:p-12">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-3 inline-flex flex-wrap items-center justify-center gap-1.5 rounded-full border border-portfolio-gold/40 bg-portfolio-gold/10 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.2em] text-portfolio-gold sm:mb-4 sm:gap-2 sm:px-4 sm:py-1.5 sm:text-xs sm:tracking-[0.24em]">
-              <span>B.U.I.L.D COMMUNITY</span>
-              <span className="hidden sm:inline">•</span>
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-portfolio-gold/40 bg-portfolio-gold/10 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.24em] text-portfolio-gold sm:text-xs">
+              <span>5 WAYS MONETIZATION</span>
+              <span>•</span>
               <span>MONETIZATION MASTERCLASS</span>
             </div>
 
-            <h1 className="text-2xl font-extrabold leading-tight tracking-[-0.03em] text-white sm:text-4xl md:text-5xl lg:text-[4.2rem]">
+            <h1 className="text-3xl font-extrabold leading-tight tracking-[-0.04em] text-white sm:text-5xl md:text-6xl lg:text-[4.2rem]">
               5 WAYS NIGERIANS MONETIZE THEIR SKILLS TO EARN ₦1M TO ₦3M MONTHLY
             </h1>
 
-            <p className="mt-4 text-base font-semibold text-portfolio-fg sm:mt-6 sm:text-xl md:text-2xl">
-              B.U.I.L.D — Building Income With Long-Term Direction
+            <p className="mt-6 text-lg font-semibold text-portfolio-fg sm:text-xl md:text-2xl">
+              Building Income With Long-Term Direction
             </p>
 
             {/* NOTE Box */}
-            <div className="mt-5 rounded-xl border border-portfolio-gold/40 bg-portfolio-gold/10 p-3.5 sm:mt-6 sm:rounded-2xl sm:p-5 text-left md:text-center">
-              <p className="text-xs font-semibold leading-relaxed text-portfolio-gold sm:text-base">
+            <div className="mt-6 rounded-2xl border border-portfolio-gold/40 bg-portfolio-gold/10 p-4 sm:p-5 text-left md:text-center">
+              <p className="text-sm font-semibold leading-relaxed text-portfolio-gold sm:text-base">
                 💡 <span className="font-extrabold text-white">NOTE:</span> Even if you do not have skill, you would be taught one! That’s how stubborn we are to see you win!
               </p>
             </div>
 
             {/* ADVICE Box */}
-            <div className="mt-3.5 rounded-xl border border-amber-500/40 bg-amber-950/30 p-3.5 sm:mt-4 sm:rounded-2xl sm:p-5 text-left md:text-center">
-              <p className="text-xs font-semibold leading-relaxed text-amber-200 sm:text-base">
+            <div className="mt-4 rounded-2xl border border-amber-500/40 bg-amber-950/30 p-4 sm:p-5 text-left md:text-center">
+              <p className="text-sm font-semibold leading-relaxed text-amber-200 sm:text-base">
                 ⚠️ <span className="font-extrabold text-amber-400">ADVICE:</span> Do not do all 5, there is a video King Ezekiel explained which monetisation path best suits you!
               </p>
             </div>
 
-            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row">
-              <CTAButton className="w-full sm:w-auto" />
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <CTAButton />
             </div>
 
-            <div className="mt-8 grid gap-2.5 border-t border-portfolio-border pt-6 text-left sm:mt-10 sm:gap-3 sm:grid-cols-3">
+            <div className="mt-10 grid gap-3 border-t border-portfolio-border pt-6 text-left sm:grid-cols-3">
               {[
                 ["LEARN & BUILD", "Practical income streams"],
                 ["GET A SKILL", "Taught for free inside"],
@@ -79,12 +79,12 @@ function Hero() {
               ].map(([title, desc]) => (
                 <div
                   key={title}
-                  className="rounded-xl sm:rounded-2xl border border-portfolio-border bg-portfolio-card/70 p-3.5 sm:p-4 text-center"
+                  className="rounded-2xl border border-portfolio-border bg-portfolio-card/70 p-4 text-center"
                 >
-                  <div className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-portfolio-gold">
+                  <div className="text-xs font-semibold uppercase tracking-[0.22em] text-portfolio-gold">
                     {title}
                   </div>
-                  <div className="mt-1 text-xs text-portfolio-muted sm:mt-2 sm:text-sm">
+                  <div className="mt-2 text-sm text-portfolio-muted">
                     {desc}
                   </div>
                 </div>
@@ -220,7 +220,7 @@ function VideoSection() {
               </div>
             )}
 
-            {/* Custom Interactive Controls Overlay — Optimized for Mobile & Desktop */}
+            {/* Custom Interactive Controls Overlay */}
             <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/95 via-black/85 to-transparent p-2.5 backdrop-blur-sm sm:p-4 sm:px-6">
               
               {/* MOBILE CONTROLS BAR (sm:hidden) */}
@@ -479,12 +479,12 @@ function FAQAccordion() {
 
   const faqs = [
     {
-      q: "How do I join the B.U.I.L.D Community?",
-      a: "Click the 'BUY VIA WHATSAPP' button on this page. You'll be connected directly to WhatsApp where you will receive immediate access to the community.",
+      q: "How do I get access to the training?",
+      a: "Click the 'BUY VIA WHATSAPP' button on this page. You'll be connected directly to WhatsApp where you will receive immediate access to the training and support group.",
     },
     {
       q: "What if I don't have any digital skill right now?",
-      a: "No problem at all! Even if you don't have any skill, you will be taught high-demand skills (such as Facebook Ads, Vibe Coding, Ghostwriting, Google Ads, Branding, AI Automation & Agent Building) for free inside the community.",
+      a: "No problem at all! Even if you don't have any skill, you will be taught high-demand skills (such as Facebook Ads, Vibe Coding, Ghostwriting, Google Ads, Branding, AI Automation & Agent Building) for free inside the course.",
     },
     {
       q: "Should I execute all 5 monetization paths?",
@@ -492,7 +492,7 @@ function FAQAccordion() {
     },
     {
       q: "Can I do this using my smartphone?",
-      a: "Yes. All training videos, community guidance, and monetization methods can be followed using a smartphone or laptop.",
+      a: "Yes. All training videos, guidance, and monetization methods can be followed using a smartphone or laptop.",
     },
   ];
 
@@ -541,7 +541,7 @@ function Footer() {
     <footer className="border-t border-portfolio-border py-6 sm:py-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 text-center text-xs sm:text-sm text-portfolio-muted sm:px-6 md:flex-row md:text-left lg:px-8">
         <div>
-          <div className="text-sm font-semibold text-white sm:text-base">B.U.I.L.D Community</div>
+          <div className="text-sm font-semibold text-white sm:text-base">5 Ways Monetization</div>
           <div className="mt-1">King Ezekiel • 5 Ways Nigerians Monetize Skills</div>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:justify-end">
@@ -647,7 +647,7 @@ export default function AdBuildCommunityLandingPage() {
           <div className="mx-auto max-w-3xl px-3 text-center sm:px-6 lg:px-8">
             <CTAButton className="w-full sm:w-auto text-sm py-4 px-6 sm:py-5 sm:px-8" />
             <p className="mt-2.5 text-xs text-portfolio-muted sm:mt-3 sm:text-sm">
-              Instant WhatsApp Access + Support Community
+              Instant WhatsApp Access + Support Group
             </p>
           </div>
         </section>
@@ -703,7 +703,7 @@ export default function AdBuildCommunityLandingPage() {
           <div className="mx-auto max-w-5xl px-3 sm:px-6 lg:px-8">
             <div className="rounded-[22px] sm:rounded-[28px] border-2 border-portfolio-gold bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.18),_rgba(17,17,17,0.95))] p-5 sm:p-10 md:p-12 text-center">
               <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.24em] text-portfolio-gold">
-                SPECIAL COMMUNITY BONUS
+                SPECIAL BONUS
               </p>
               <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-4xl md:text-5xl">
                 YOU HAVE NO SKILL?? FEAR NOT!
@@ -730,44 +730,6 @@ export default function AdBuildCommunityLandingPage() {
           </div>
         </section>
 
-        {/* TESTIMONIALS & PROOF SECTION */}
-        <section className="py-8 sm:py-16">
-          <div className="mx-auto max-w-6xl px-3 sm:px-6 lg:px-8">
-            <div className="mb-6 text-center sm:mb-8">
-              <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.24em] text-portfolio-gold">
-                REAL STUDENT PROOF
-              </p>
-              <h2 className="mt-1.5 text-2xl font-bold tracking-[-0.03em] text-white sm:text-4xl md:text-5xl">
-                What My Students Are Saying
-              </h2>
-              <p className="mt-1.5 text-xs text-portfolio-muted sm:text-sm">
-                Results vary based on commitment, effort, skill, and execution.
-              </p>
-            </div>
-
-            {/* Video Testimonials */}
-            <div className="mb-8 grid gap-4 md:grid-cols-2 sm:gap-6">
-              <div className="rounded-[20px] sm:rounded-[24px] border border-portfolio-border bg-portfolio-card p-4 sm:p-5">
-                <h3 className="mb-2.5 text-center text-xs font-semibold text-white sm:text-base">
-                  Grossed over ₦2 Million reselling my courses
-                </h3>
-                <YouTubePlayer url="https://youtu.be/nZ9qfAJnCCQ" playbackGroup="build-testimonials" />
-              </div>
-              <div className="rounded-[20px] sm:rounded-[24px] border border-portfolio-border bg-portfolio-card p-4 sm:p-5">
-                <h3 className="mb-2.5 text-center text-base font-semibold text-white sm:text-base">
-                  Grossed more than ₦500k in a month reselling my courses
-                </h3>
-                <YouTubePlayer url="https://youtu.be/wsobW917ib4" playbackGroup="build-testimonials" />
-              </div>
-            </div>
-
-            {/* Screenshots Carousel */}
-            <div className="mt-6 sm:mt-8">
-              <ImageCarousel images={studentProofImages} />
-            </div>
-          </div>
-        </section>
-
         {/* FAQ SECTION */}
         <section id="faq" className="py-8 sm:py-16">
           <div className="mx-auto max-w-4xl px-3 sm:px-6 lg:px-8">
@@ -787,7 +749,7 @@ export default function AdBuildCommunityLandingPage() {
               Ready to Monetize Your Skills &amp; Earn Monthly?
             </h2>
             <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-portfolio-muted sm:mt-5 sm:text-lg">
-              Join the B.U.I.L.D Community today and get full access to the monetization blueprint and free skill classes.
+              Get full access to the 5 Ways Monetization blueprint and free skill classes today.
             </p>
             <div className="mt-6 flex justify-center sm:mt-8">
               <CTAButton className="w-full sm:w-auto" />
@@ -801,10 +763,10 @@ export default function AdBuildCommunityLandingPage() {
         <Footer />
       </div>
 
-      {/* STICKY MOBILE CONVERSION BAR — Optimized for mobile thumbs */}
+      {/* STICKY MOBILE CONVERSION BAR */}
       <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center justify-between gap-3 border-t border-portfolio-gold/30 bg-black/90 px-4 py-3 backdrop-blur-md shadow-[0_-10px_25px_rgba(0,0,0,0.8)] sm:hidden">
         <div className="flex flex-col text-left">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-portfolio-gold">B.U.I.L.D Community</span>
+          <span className="text-[10px] font-bold uppercase tracking-wider text-portfolio-gold">5 Ways Monetization</span>
           <span className="text-xs font-semibold text-white">Instant Access</span>
         </div>
         <CTAButton className="px-4 py-2.5 text-[11px]" />
