@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { YouTubePlayer, ImageCarousel } from "../renderer/DynamicComponents";
 
 export const BUILD_COMMUNITY_WHATSAPP_URL =
@@ -48,12 +48,6 @@ function Hero() {
             <h1 className="text-3xl font-extrabold leading-tight tracking-[-0.04em] text-white sm:text-5xl md:text-6xl lg:text-[4.2rem]">
               5 WAYS NIGERIANS MONETIZE THEIR SKILLS TO EARN ₦1M TO ₦3M MONTHLY
             </h1>
-
-            {/* Price Badge */}
-            <div className="mt-6 inline-flex items-center justify-center gap-3 rounded-2xl border-2 border-portfolio-gold bg-portfolio-gold/20 px-6 py-3 text-xl font-black uppercase tracking-[0.14em] text-portfolio-gold shadow-[0_0_30px_rgba(212,175,55,0.3)] sm:text-2xl">
-              <span>PRICE:</span>
-              <span className="text-white">₦3,500</span>
-            </div>
 
             <p className="mt-6 text-lg font-semibold text-portfolio-fg sm:text-xl md:text-2xl">
               B.U.I.L.D — Building Income With Long-Term Direction
@@ -105,53 +99,241 @@ function Hero() {
 
 function VideoSection() {
   const [isMuted, setIsMuted] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [playbackRate, setPlaybackRate] = useState(1);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const currentTimeRef = useRef<number>(60);
 
-  function toggleMute() {
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(Boolean(document.fullscreenElement));
+    };
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
+
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (typeof event.data === "string") {
+        try {
+          const data = JSON.parse(event.data);
+          if (data.event === "infoDelivery" && data.info && typeof data.info.currentTime === "number") {
+            currentTimeRef.current = data.info.currentTime;
+          }
+        } catch {}
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+
+  function sendCommand(func: string, args: any[] = []) {
     const player = document.getElementById("build-preview-video") as HTMLIFrameElement | null;
-
     player?.contentWindow?.postMessage(
       JSON.stringify({
         event: "command",
-        func: isMuted ? "unMute" : "mute",
-        args: [],
+        func,
+        args,
       }),
-      "https://www.youtube-nocookie.com",
+      "https://www.youtube-nocookie.com"
     );
+  }
+
+  function toggleMute() {
+    sendCommand(isMuted ? "unMute" : "mute");
     setIsMuted(!isMuted);
   }
 
+  function togglePlay() {
+    sendCommand(isPlaying ? "pauseVideo" : "playVideo");
+    setIsPlaying(!isPlaying);
+  }
+
+  function toggleFullscreen() {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      containerRef.current?.requestFullscreen();
+    }
+  }
+
+  function changeSpeed(rate: number) {
+    sendCommand("setPlaybackRate", [rate]);
+    setPlaybackRate(rate);
+  }
+
+  function seekRelative(seconds: number) {
+    const targetTime = Math.max(60, Math.min(3120, currentTimeRef.current + seconds));
+    sendCommand("seekTo", [targetTime, true]);
+    currentTimeRef.current = targetTime;
+  }
+
   return (
-    <section aria-label="Course preview video" className="py-8 sm:py-10">
+    <section aria-label="Live training recap video" className="py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mb-4 text-center">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-portfolio-gold sm:text-xs">
-            WATCH THIS FIRST
-          </p>
-          <p className="mt-3 text-base text-portfolio-muted sm:text-lg">
-            Watch King Ezekiel explain which monetization path best suits you!
+          <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-portfolio-gold/40 bg-portfolio-gold/10 px-3.5 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-portfolio-gold sm:text-xs">
+            <span className="inline-block h-2 w-2 rounded-full bg-red-500 animate-pulse" />
+            <span>LIVE CLASS REPLAY</span>
+            <span>•</span>
+            <span>FULL SESSION RECAP</span>
+          </div>
+          <p className="mt-2 text-base leading-relaxed text-portfolio-muted sm:text-lg">
+            This video is a complete recap of a live training class that already took place. Watch King Ezekiel explain step-by-step which monetization path best suits your goals!
           </p>
         </div>
 
-        <div className="relative overflow-hidden rounded-[28px] border border-portfolio-border bg-portfolio-card shadow-2xl">
+        <div
+          ref={containerRef}
+          id="video-player-container"
+          className="group relative overflow-hidden rounded-[28px] border border-portfolio-border bg-portfolio-card shadow-2xl"
+        >
           <div className="relative aspect-video w-full bg-black">
             <iframe
               id="build-preview-video"
-              className="pointer-events-none absolute inset-0 h-full w-full"
+              className="absolute inset-0 h-full w-full"
               tabIndex={-1}
               src="https://www.youtube-nocookie.com/embed/TniI1hTLD3I?start=60&end=3120&autoplay=1&mute=1&playsinline=1&controls=0&disablekb=1&enablejsapi=1&rel=0&loop=1&playlist=TniI1hTLD3I"
-              title="5 Ways Nigerians Monetize Their Skills video preview"
+              title="5 Ways Nigerians Monetize Their Skills live class recap"
               allow="autoplay; encrypted-media; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
             />
-            <div className="absolute inset-0 z-10 flex items-center justify-center">
-              <button
-                type="button"
-                onClick={toggleMute}
-                aria-label={isMuted ? "Unmute course preview video" : "Mute course preview video"}
-                className="rounded-full border-2 border-portfolio-gold bg-portfolio-gold px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-black shadow-[0_0_36px_rgba(212,175,55,0.55)] transition-all duration-200 hover:scale-105 hover:bg-[#e7c75c] focus:outline-none focus:ring-4 focus:ring-white/70"
-              >
-                {isMuted ? "Unmute video" : "Mute video"}
-              </button>
+
+            {/* Center Unmute Button when Muted */}
+            {isMuted && (
+              <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/30 pointer-events-none">
+                <button
+                  type="button"
+                  onClick={toggleMute}
+                  aria-label="Unmute live class recap video"
+                  className="pointer-events-auto rounded-full border-2 border-portfolio-gold bg-portfolio-gold px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-black shadow-[0_0_36px_rgba(212,175,55,0.55)] transition-all duration-200 hover:scale-105 hover:bg-[#e7c75c] focus:outline-none focus:ring-4 focus:ring-white/70"
+                >
+                  Unmute video
+                </button>
+              </div>
+            )}
+
+            {/* Custom Interactive Controls Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 z-20 flex flex-wrap items-center justify-between gap-3 bg-gradient-to-t from-black/95 via-black/85 to-transparent p-4 backdrop-blur-sm sm:px-6">
+              {/* Play / Pause & Mute controls */}
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={togglePlay}
+                  aria-label={isPlaying ? "Pause video" : "Play video"}
+                  title={isPlaying ? "Pause" : "Play"}
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-portfolio-gold/30 bg-black/60 text-portfolio-gold transition-colors hover:border-portfolio-gold hover:bg-portfolio-gold/20"
+                >
+                  {isPlaying ? (
+                    <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                  ) : (
+                    <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  )}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={toggleMute}
+                  aria-label={isMuted ? "Unmute sound" : "Mute sound"}
+                  title={isMuted ? "Unmute sound" : "Mute sound"}
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-portfolio-gold/30 bg-black/60 text-portfolio-gold transition-colors hover:border-portfolio-gold hover:bg-portfolio-gold/20"
+                >
+                  {isMuted ? (
+                    <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                  ) : (
+                    <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                  )}
+                </button>
+              </div>
+
+              {/* Fast Forward & Rewind (-10s, -5s, +5s, +10s) */}
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <button
+                  type="button"
+                  onClick={() => seekRelative(-10)}
+                  title="Rewind 10 seconds"
+                  aria-label="Rewind 10 seconds"
+                  className="inline-flex items-center gap-1 rounded-lg border border-portfolio-border bg-black/60 px-2.5 py-1.5 text-xs font-semibold text-portfolio-fg transition-colors hover:border-portfolio-gold hover:text-portfolio-gold"
+                >
+                  <span>↺</span>
+                  <span>-10s</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => seekRelative(-5)}
+                  title="Rewind 5 seconds"
+                  aria-label="Rewind 5 seconds"
+                  className="inline-flex items-center gap-1 rounded-lg border border-portfolio-border bg-black/60 px-2.5 py-1.5 text-xs font-semibold text-portfolio-fg transition-colors hover:border-portfolio-gold hover:text-portfolio-gold"
+                >
+                  <span>-5s</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => seekRelative(5)}
+                  title="Fast forward 5 seconds"
+                  aria-label="Fast forward 5 seconds"
+                  className="inline-flex items-center gap-1 rounded-lg border border-portfolio-border bg-black/60 px-2.5 py-1.5 text-xs font-semibold text-portfolio-fg transition-colors hover:border-portfolio-gold hover:text-portfolio-gold"
+                >
+                  <span>+5s</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => seekRelative(10)}
+                  title="Fast forward 10 seconds"
+                  aria-label="Fast forward 10 seconds"
+                  className="inline-flex items-center gap-1 rounded-lg border border-portfolio-border bg-black/60 px-2.5 py-1.5 text-xs font-semibold text-portfolio-fg transition-colors hover:border-portfolio-gold hover:text-portfolio-gold"
+                >
+                  <span>+10s</span>
+                  <span>↻</span>
+                </button>
+              </div>
+
+              {/* Speed Controller & Fullscreen / Minimize button */}
+              <div className="flex items-center gap-2">
+                {/* Speed buttons */}
+                <div className="flex items-center rounded-lg border border-portfolio-border bg-black/60 p-0.5 text-xs">
+                  {[1, 1.25, 1.5, 2].map((rate) => (
+                    <button
+                      key={rate}
+                      type="button"
+                      onClick={() => changeSpeed(rate)}
+                      className={`rounded px-2 py-1 font-semibold transition-colors ${
+                        playbackRate === rate
+                          ? "bg-portfolio-gold text-black shadow"
+                          : "text-portfolio-muted hover:text-white"
+                      }`}
+                    >
+                      {rate}x
+                    </button>
+                  ))}
+                </div>
+
+                {/* Fullscreen / Minimize toggle button */}
+                <button
+                  type="button"
+                  onClick={toggleFullscreen}
+                  aria-label={isFullscreen ? "Minimize / Exit Fullscreen" : "Full Screen"}
+                  title={isFullscreen ? "Minimize / Exit Fullscreen" : "Full Screen"}
+                  className="flex h-9 items-center justify-center gap-1.5 rounded-lg border border-portfolio-gold/40 bg-portfolio-gold/10 px-3 text-xs font-bold uppercase tracking-wider text-portfolio-gold transition-colors hover:bg-portfolio-gold hover:text-black"
+                >
+                  {isFullscreen ? (
+                    <>
+                      <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/>
+                      </svg>
+                      <span className="hidden sm:inline">Minimize</span>
+                    </>
+                  ) : (
+                    <>
+                      <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                      </svg>
+                      <span className="hidden sm:inline">Full Screen</span>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -220,8 +402,8 @@ function FAQAccordion() {
 
   const faqs = [
     {
-      q: "How much does it cost to join the B.U.I.L.D Community?",
-      a: "The registration fee is ₦3,500. This gives you instant access to the monetization training, skill classes, and community support.",
+      q: "How do I join the B.U.I.L.D Community?",
+      a: "Click the 'BUY VIA WHATSAPP' button on this page. You'll be connected directly to WhatsApp where you will receive immediate access to the community.",
     },
     {
       q: "What if I don't have any digital skill right now?",
@@ -234,10 +416,6 @@ function FAQAccordion() {
     {
       q: "Can I do this using my smartphone?",
       a: "Yes. All training videos, community guidance, and monetization methods can be followed using a smartphone or laptop.",
-    },
-    {
-      q: "How do I pay and get access?",
-      a: "Click the 'BUY VIA WHATSAPP' button on this page. You'll be connected directly to WhatsApp where you will receive immediate payment details and instant community access.",
     },
   ];
 
@@ -350,6 +528,16 @@ export default function AdBuildCommunityLandingPage() {
         "Proposal drafting like A Professional",
         "Choose A Skill: Professional Advertising or Vibe Coding: Full-Stack Web Development With AI Course",
       ],
+    },
+    {
+      number: "BONUS",
+      title: "BONUS: YOUTUBE MONETIZATION & AI ANIMATION",
+      subtitle: "Turn video content into continuous revenue streams with YouTube monetization and AI animation.",
+      points: [
+        "Monetize YouTube channels with high-value content strategy",
+        "Create engaging AI animated videos effortlessly",
+        "Build recurring monthly earnings from video views and sponsorships",
+      ],
       accent: true,
     },
   ];
@@ -360,6 +548,7 @@ export default function AdBuildCommunityLandingPage() {
     "3. Full-Stack Web Development With AI (Vibe Coding) — HIGH DEMAND",
     "4. Branding & Graphic Design With AI — HIGH DEMAND",
     "5. Professional Google Advertising — HIGH DEMAND",
+    "6. AI Automation & Agent Building — HIGH DEMAND",
   ];
 
   const studentProofImages = [
@@ -376,12 +565,12 @@ export default function AdBuildCommunityLandingPage() {
 
         <VideoSection />
 
-        {/* PRICE & CALL TO ACTION BANNER */}
+        {/* CALL TO ACTION BANNER */}
         <section className="py-6 sm:py-8">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
             <CTAButton className="w-full sm:w-auto text-base py-5 px-8" />
             <p className="mt-3 text-sm text-portfolio-muted">
-              Price: <span className="font-bold text-white">₦3,500</span> • Instant WhatsApp Access + Support Community
+              Instant WhatsApp Access + Support Community
             </p>
           </div>
         </section>
@@ -521,7 +710,7 @@ export default function AdBuildCommunityLandingPage() {
               Ready to Monetize Your Skills &amp; Earn Monthly?
             </h2>
             <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-portfolio-muted sm:text-lg">
-              Join the B.U.I.L.D Community today for just <span className="font-bold text-portfolio-gold">₦3,500</span> and get full access to the monetization blueprint and free skill classes.
+              Join the B.U.I.L.D Community today and get full access to the monetization blueprint and free skill classes.
             </p>
             <div className="mt-8 flex justify-center">
               <CTAButton />
