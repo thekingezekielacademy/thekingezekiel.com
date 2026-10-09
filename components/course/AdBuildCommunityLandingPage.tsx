@@ -587,12 +587,10 @@ export default function AdBuildCommunityLandingPage() {
     },
     {
       number: "4",
-      title: "E-COMMERCE",
-      subtitle: "Build physical product revenue streams with simple, proven systems.",
+      title: "SOCIAL MEDIA MONETIZATION",
+      subtitle: "Turn your online presence into a paying asset — platforms are already rewarding creators.",
       points: [
-        "Dropshipping",
-        "Arbitrage",
-        "Importation",
+        "YouTube Monetization — grow a channel and earn from ads, memberships & sponsorships",
       ],
     },
     {
@@ -608,12 +606,12 @@ export default function AdBuildCommunityLandingPage() {
     },
     {
       number: "BONUS",
-      title: "BONUS: YOUTUBE MONETIZATION & AI ANIMATION",
-      subtitle: "Turn video content into continuous revenue streams with YouTube monetization and AI animation.",
+      title: "BONUS: NIGERIAN IMPORTERS PLAYBOOK",
+      subtitle: "How smart Nigerians import products from China and flip them for massive profit locally.",
       points: [
-        "Monetize YouTube channels with high-value content strategy",
-        "Create engaging AI animated videos effortlessly",
-        "Build recurring monthly earnings from video views and sponsorships",
+        "iPhones — source premium smartphones directly from Chinese suppliers at wholesale prices",
+        "Women's Clothing — import trending fashion items from China and sell at 3x–5x markup",
+        "Step-by-step guide: finding suppliers, negotiating deals, clearing customs, and making sales",
       ],
       accent: true,
     },
