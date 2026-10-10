@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import CourseLandingPage from '../../components/course/CourseLandingPage';
 import AdBuildCommunityLandingPage from '../../components/course/AdBuildCommunityLandingPage';
 import FiveWaysToEarnOnlineKePage from '../../components/course/FiveWaysToEarnOnlineKePage';
+import WaSalesMachineLandingPage from '../../components/course/WaSalesMachineLandingPage';
 import { DynamicTemplate } from '../../components/renderer/DynamicTemplate';
 import { VisionFooter } from '../../components/portfolio/VisionFooter';
 import { Navbar } from '../../components/portfolio/Navbar';
@@ -34,6 +35,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
       title: '5 Ways to Earn Online | King Ezekiel',
       description: 'Master Information Marketing, Ebooks, Freelancing, YouTube Monetization, AI Animation, Importation, and choose your specialized skill to start earning online.',
+    };
+  }
+
+  if (slug === 'for-ad-wa-sales-machine') {
+    return {
+      title: 'WA Sales Machine — WhatsApp Automation + Facebook Ads | King Ezekiel',
+      description: 'Turn your WhatsApp into a 24/7 sales machine. Automate replies, voice notes, and follow-ups. Run profitable Facebook Ads. Never miss a lead again.',
     };
   }
 
@@ -174,6 +182,10 @@ export default async function DynamicPage({ params }: { params: Promise<{ slug: 
 
   if (slug === '5-ways-to-earn-online-ke') {
     return <FiveWaysToEarnOnlineKePage />;
+  }
+
+  if (slug === 'for-ad-wa-sales-machine') {
+    return <WaSalesMachineLandingPage />;
   }
 
   if (slug === hiddenSlug) {
