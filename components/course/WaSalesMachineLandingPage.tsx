@@ -3,13 +3,32 @@
 import { useState } from "react";
 
 export const WA_SALES_WHATSAPP_URL =
-  process.env.NEXT_PUBLIC_BUILD_COMMUNITY_WHATSAPP_URL ?? "https://wa.link/k4m8ft";
+  process.env.NEXT_PUBLIC_WA_SALES_WHATSAPP_URL ?? "https://wa.link/by8sni";
 
 type CTAButtonProps = {
   label?: string;
   href?: string;
   className?: string;
 };
+
+function PriceTag({ className = "" }: { className?: string }) {
+  return (
+    <div className={`inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 ${className}`}>
+      <div className="inline-flex items-center gap-1.5 rounded-full border border-red-500/40 bg-red-500/10 px-3 py-1 text-xs font-semibold text-red-400 sm:text-sm">
+        <span className="text-red-300/80">Original Price:</span>
+        <span className="line-through decoration-red-500 decoration-2 font-bold text-red-400">
+          ₦5,000
+        </span>
+      </div>
+      <div className="inline-flex items-center gap-1.5 rounded-full border border-[#25D366]/50 bg-[#25D366]/15 px-3.5 py-1 text-xs font-extrabold text-[#25D366] sm:text-sm shadow-[0_0_15px_rgba(37,211,102,0.25)]">
+        <span className="text-emerald-300">Giveaway Price:</span>
+        <span className="text-base sm:text-lg font-black text-[#25D366]">
+          ₦1,000
+        </span>
+      </div>
+    </div>
+  );
+}
 
 function CTAButton({
   label = "BUY VIA WHATSAPP",
@@ -55,7 +74,8 @@ function Hero() {
               Stop losing customers because you couldn&apos;t reply on time. Automate your WhatsApp to work 24/7 — while you rest, sleep, or focus on other things.
             </p>
 
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center justify-center gap-4">
+              <PriceTag />
               <CTAButton />
             </div>
 
@@ -128,6 +148,10 @@ function FAQAccordion() {
     {
       q: "What is 'The Fix Package' bonus?",
       a: "The Fix Package is a bonus module that covers how to fix common account issues including your Instagram dollar account, 'Can't Create Page' errors, and more Meta-related problems that stop people from running their business online.",
+    },
+    {
+      q: "How much is the course?",
+      a: "The course is currently on a special giveaway price of ₦1,000 (regular price ₦5,000). You get instant access to the complete 3-in-1 package including WhatsApp Automation, Facebook Ads, and The Fix Package bonus.",
     },
     {
       q: "How do I access the course after purchase?",
@@ -226,6 +250,9 @@ export default function WaSalesMachineLandingPage() {
         {/* QUICK CTA */}
         <section className="py-6 sm:py-8">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+            <div className="mb-4">
+              <PriceTag />
+            </div>
             <CTAButton className="w-full sm:w-auto" />
             <p className="mt-3 text-sm text-portfolio-muted">
               Instant WhatsApp access + lifetime course access + support group.
@@ -403,7 +430,10 @@ export default function WaSalesMachineLandingPage() {
             <h3 className="text-2xl font-bold tracking-[-0.04em] text-white sm:text-3xl md:text-4xl">
               Ready to Automate Your WhatsApp &amp; Run Profitable Facebook Ads?
             </h3>
-            <div className="mt-6 flex justify-center">
+            <div className="mt-6 mb-4">
+              <PriceTag />
+            </div>
+            <div className="flex justify-center">
               <CTAButton />
             </div>
             <p className="mt-3 text-sm text-portfolio-muted">Instant access after purchase via WhatsApp.</p>
@@ -470,7 +500,10 @@ export default function WaSalesMachineLandingPage() {
             <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-portfolio-muted sm:text-lg">
               Automate your replies, voice notes, and follow-ups. Run profitable Facebook Ads. Never miss a lead again.
             </p>
-            <div className="mt-8 flex justify-center">
+            <div className="mt-8 mb-4">
+              <PriceTag />
+            </div>
+            <div className="flex justify-center">
               <CTAButton />
             </div>
             <p className="mt-3 text-sm text-portfolio-muted">
@@ -486,10 +519,13 @@ export default function WaSalesMachineLandingPage() {
       </div>
 
       {/* STICKY MOBILE CONVERSION BAR */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center justify-between gap-3 border-t border-[#25D366]/30 bg-black/90 px-4 py-3 backdrop-blur-md shadow-[0_-10px_25px_rgba(0,0,0,0.8)] sm:hidden">
+      <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center justify-between gap-3 border-t border-[#25D366]/30 bg-black/95 px-4 py-3 backdrop-blur-md shadow-[0_-10px_25px_rgba(0,0,0,0.8)] sm:hidden">
         <div className="flex flex-col text-left">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-[#25D366]">WA Sales Machine</span>
-          <span className="text-xs font-semibold text-white">WhatsApp Automation + FB Ads</span>
+          <div className="flex items-center gap-1.5">
+            <span className="text-[10px] font-semibold text-red-400 line-through decoration-red-500">₦5,000</span>
+            <span className="text-sm font-black text-[#25D366]">₦1,000</span>
+          </div>
+          <span className="text-[10px] font-medium text-white/90">WA Sales Machine</span>
         </div>
         <CTAButton className="px-4 py-2.5 text-[11px]" />
       </div>
