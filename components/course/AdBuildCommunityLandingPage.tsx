@@ -97,13 +97,29 @@ function Hero() {
   );
 }
 
-function VideoSection() {
+export function AdBuildVideoPlayer({
+  videoId = "TniI1hTLD3I",
+  videoTitle = "5 Ways Nigerians Monetize Their Skills live class recap",
+  videoLabel = "LIVE CLASS REPLAY",
+  videoTagline = "FULL SESSION RECAP",
+  videoDescription = "This video is a complete recap of a live training class that already took place. Watch King Ezekiel explain step-by-step which monetization path best suits your goals!",
+  startTime = 60,
+  endTime = 3120,
+}: {
+  videoId?: string;
+  videoTitle?: string;
+  videoLabel?: string;
+  videoTagline?: string;
+  videoDescription?: string;
+  startTime?: number;
+  endTime?: number | null;
+}) {
   const [isMuted, setIsMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
   const [playbackRate, setPlaybackRate] = useState(1);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const currentTimeRef = useRef<number>(60);
+  const currentTimeRef = useRef<number>(startTime);
 
   useEffect(() => {
     const handleFullscreenChange = () => {
@@ -128,7 +144,7 @@ function VideoSection() {
     return () => window.removeEventListener("message", handleMessage);
   }, []);
 
-  function sendCommand(func: string, args: any[] = []) {
+  function sendCommand(func: string, args: Array<number | boolean> = []) {
     const player = document.getElementById("build-preview-video") as HTMLIFrameElement | null;
     player?.contentWindow?.postMessage(
       JSON.stringify({
@@ -170,7 +186,7 @@ function VideoSection() {
   }
 
   function seekRelative(seconds: number) {
-    const targetTime = Math.max(60, Math.min(3120, currentTimeRef.current + seconds));
+    const targetTime = Math.max(startTime, Math.min(endTime ?? 3120, currentTimeRef.current + seconds));
     sendCommand("seekTo", [targetTime, true]);
     currentTimeRef.current = targetTime;
   }
@@ -181,12 +197,12 @@ function VideoSection() {
         <div className="mb-3 text-center sm:mb-4">
           <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-portfolio-gold/40 bg-portfolio-gold/10 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.2em] text-portfolio-gold sm:px-3.5 sm:text-xs sm:tracking-[0.24em]">
             <span className="inline-block h-2 w-2 rounded-full bg-red-500 animate-pulse" />
-            <span>LIVE CLASS REPLAY</span>
+            <span>{videoLabel}</span>
             <span>•</span>
-            <span>FULL SESSION RECAP</span>
+            <span>{videoTagline}</span>
           </div>
           <p className="mt-1.5 text-xs leading-relaxed text-portfolio-muted sm:mt-2 sm:text-base md:text-lg">
-            This video is a complete recap of a live training class that already took place. Watch King Ezekiel explain step-by-step which monetization path best suits your goals!
+            {videoDescription}
           </p>
         </div>
 
@@ -200,8 +216,8 @@ function VideoSection() {
               id="build-preview-video"
               className="absolute inset-0 h-full w-full"
               tabIndex={-1}
-              src="https://www.youtube-nocookie.com/embed/TniI1hTLD3I?start=60&end=3120&autoplay=1&mute=1&playsinline=1&controls=0&disablekb=1&enablejsapi=1&rel=0&loop=1&playlist=TniI1hTLD3I"
-              title="5 Ways Nigerians Monetize Their Skills live class recap"
+              src={`https://www.youtube-nocookie.com/embed/${videoId}?${startTime ? `start=${startTime}&` : ""}${endTime ? `end=${endTime}&` : ""}autoplay=1&mute=1&playsinline=1&controls=0&disablekb=1&enablejsapi=1&rel=0&loop=1&playlist=${videoId}`}
+              title={videoTitle}
               allow="autoplay; encrypted-media; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
             />
@@ -638,7 +654,7 @@ export default function AdBuildCommunityLandingPage() {
       <div className="mx-auto max-w-[1400px] border-x border-portfolio-border bg-portfolio-bg p-0 shadow-[0_0_30px_rgba(0,0,0,0.35)]">
         <Hero />
 
-        <VideoSection />
+        <AdBuildVideoPlayer />
 
         {/* CALL TO ACTION BANNER */}
         <section className="py-4 sm:py-8">

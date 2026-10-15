@@ -8,6 +8,8 @@ import AdBuildCommunityLandingPage from '../../components/course/AdBuildCommunit
 import FiveWaysToEarnOnlineKePage from '../../components/course/FiveWaysToEarnOnlineKePage';
 import WaSalesMachineLandingPage from '../../components/course/WaSalesMachineLandingPage';
 import WaSalesMachineFullPackagePage from '../../components/course/WaSalesMachineFullPackagePage';
+import EbookSalesLandingPage from '../../components/course/EbookSalesLandingPage';
+import EbooksSellLikeCrazyFullCoursePage from '../../components/course/EbooksSellLikeCrazyFullCoursePage';
 import { DynamicTemplate } from '../../components/renderer/DynamicTemplate';
 import { VisionFooter } from '../../components/portfolio/VisionFooter';
 import { Navbar } from '../../components/portfolio/Navbar';
@@ -43,6 +45,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
       title: 'WA Sales Machine Full Package | King Ezekiel',
       description: 'Learn How to turn your WhatsApp into a sales machine. Automate your WhatsApp to work 24/7.',
+      robots: {
+        index: false,
+        follow: false,
+        googleBot: {
+          index: false,
+          follow: false,
+        },
+      },
+    };
+  }
+
+  if (slug === 'ebook-sales-500k-monthly-side-income') {
+    return {
+      title: 'Passive Income Starts With the Right Digital Skill | King Ezekiel',
+      description: 'Learn how to create and sell useful PDFs and e-books online, even as a complete beginner with no technical skills.',
+    };
+  }
+
+  if (slug === 'ebooks-sell-like-crazy-full-course') {
+    return {
+      title: 'Selling Knowledge: Ebooks | King Ezekiel',
+      description: 'Learn how to sell ebooks via WhatsApp and Selar, plus get a bonus marketing course.',
       robots: {
         index: false,
         follow: false,
@@ -212,6 +236,10 @@ export default async function DynamicPage({ params }: { params: Promise<{ slug: 
     return <HiddenCourseBundlePage />;
   }
 
+  if (slug === 'ebooks-sell-like-crazy-full-course') {
+    return <EbooksSellLikeCrazyFullCoursePage />;
+  }
+
   const filePath = path.join(process.cwd(), `data/pages/${slug}.json`);
 
   if (!fs.existsSync(filePath)) {
@@ -220,6 +248,10 @@ export default async function DynamicPage({ params }: { params: Promise<{ slug: 
 
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const pageData = JSON.parse(fileContents);
+
+  if (slug === 'ebook-sales-500k-monthly-side-income') {
+    return <EbookSalesLandingPage title={pageData.title} />;
+  }
 
   return (
     <main className="min-h-screen bg-portfolio-bg selection:bg-portfolio-gold selection:text-black font-sans">
