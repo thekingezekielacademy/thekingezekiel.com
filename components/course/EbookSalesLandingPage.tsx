@@ -4,9 +4,15 @@ import {
 } from "../renderer/DynamicComponents";
 import { AdBuildVideoPlayer } from "./AdBuildCommunityLandingPage";
 
+const WHATSAPP_BUY_URL = "https://wa.link/jz5ber";
+
 type EbookSalesLandingPageProps = {
   title: string;
 };
+
+function BuyViaWhatsAppButton() {
+  return <ActionButton text="Buy Via WhatsApp" url={WHATSAPP_BUY_URL} />;
+}
 
 function OfferCard() {
   return (
@@ -14,7 +20,7 @@ function OfferCard() {
       <p className="text-xl font-bold text-white sm:text-2xl">You can secure your spot</p>
       <p className="mt-3 text-base font-semibold text-white sm:text-lg">Limited Slots Available</p>
       <p className="mt-2 text-4xl font-extrabold text-portfolio-gold sm:text-5xl">JUST ₦2,000</p>
-      <ActionButton text="Buy Via WhatsApp" url="https://wa.link/tm1ylr" />
+      <BuyViaWhatsAppButton />
     </section>
   );
 }
@@ -56,6 +62,12 @@ export default function EbookSalesLandingPage({ title }: EbookSalesLandingPagePr
             </p>
           </div>
         </header>
+
+        <section aria-label="Buy via WhatsApp" className="px-4 pt-2 sm:px-6 md:px-10">
+          <div className="mx-auto max-w-5xl flex justify-center">
+            <BuyViaWhatsAppButton />
+          </div>
+        </section>
 
         <section className="px-4 py-8 sm:px-6 md:px-10 md:py-12">
           <div className="mx-auto max-w-5xl">
