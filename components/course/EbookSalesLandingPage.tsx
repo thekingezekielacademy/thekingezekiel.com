@@ -119,6 +119,29 @@ export default function EbookSalesLandingPage({ title }: EbookSalesLandingPagePr
               <YouTubePlayer url="https://youtu.be/e7ZXDpy3SS0" />
             </section>
 
+            <section
+              aria-labelledby="amazon-kdp-heading"
+              className="mt-10 rounded-2xl border-2 border-portfolio-gold/70 bg-[linear-gradient(120deg,_rgba(212,175,55,0.08),_rgba(17,17,17,0.95))] p-5 text-center sm:p-7"
+            >
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-portfolio-gold sm:text-sm">
+                Bonus course
+              </p>
+              <h2
+                id="amazon-kdp-heading"
+                className="mt-2 text-xl font-extrabold text-white sm:text-2xl"
+              >
+                AMAZON KDP 101 (BONUS)
+              </h2>
+              <a
+                href="https://www.youtube.com/playlist?list=PLJgVUrDMslzVeApy3El_qbiczL1Uw8YeS"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="mt-5 inline-flex items-center justify-center rounded-xl border border-portfolio-gold bg-portfolio-gold px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-[#e7c75c] focus:outline-none focus:ring-2 focus:ring-portfolio-gold focus:ring-offset-2 focus:ring-offset-portfolio-bg"
+              >
+                Watch Amazon KDP 101
+              </a>
+            </section>
+
             <section aria-labelledby="audience-heading" className="mt-14">
               <h2
                 id="audience-heading"
