@@ -24,6 +24,34 @@ const courseItems = [
   },
 ];
 
+const adCourseTopics = [
+  {
+    title: "Marketing 101",
+    description:
+      "Learn marketing from scratch, test the market, understand who you are selling to, and choose the right words for your offer.",
+  },
+  {
+    title: "Mini Importation",
+    description:
+      "Learn how to import products from different sites in China, including more than just iPhones.",
+  },
+  {
+    title: "WhatsApp Automation + Pro Facebook Ads",
+    description:
+      "Reach potential customers with Facebook Ads and use WhatsApp automation to manage conversations and follow up.",
+  },
+  {
+    title: "TikTok Ads Mastery",
+    description:
+      "Learn how to use TikTok Ads to introduce products to people who may want to buy them.",
+  },
+  {
+    title: "100X Sales Mastery",
+    description:
+      "Learn how to handle sales conversations, answer questions, and close sales with confidence.",
+  },
+];
+
 function WhatsAppButton({ className = "" }: { className?: string }) {
   return (
     <a
@@ -57,6 +85,9 @@ export function FromImportationToSalesAdPage() {
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-portfolio-muted sm:text-lg">
             Get practical video lessons and a detailed PDF guide with contacts and steps to help you move from learning the process to reaching potential customers.
           </p>
+          <p className="mt-6 text-lg font-bold text-portfolio-gold sm:text-xl">
+            Complete course access — just ₦2,000
+          </p>
           <WhatsAppButton className="mt-8" />
         </header>
 
@@ -76,6 +107,25 @@ export function FromImportationToSalesAdPage() {
           >
             Preview the course lessons
           </a>
+        </section>
+
+        <section className="mb-8 rounded-[22px] border border-portfolio-border bg-portfolio-card p-6 sm:p-8">
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">
+            What you&apos;ll learn
+          </h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            {adCourseTopics.map((topic) => (
+              <article
+                key={topic.title}
+                className="rounded-2xl border border-portfolio-border bg-portfolio-bg p-5"
+              >
+                <h3 className="font-bold text-portfolio-gold">{topic.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white sm:text-base">
+                  {topic.description}
+                </p>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section className="rounded-[22px] border border-portfolio-border bg-portfolio-card p-6 text-center sm:p-8">
@@ -109,6 +159,9 @@ export function FromImportationToSalesCoursePage() {
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-portfolio-muted sm:text-lg">
             Practical videos + PDF guide (contacts &amp; steps). Work through each course at your pace.
           </p>
+          <div className="mt-7 flex justify-center">
+            <WhatsAppButton />
+          </div>
         </header>
 
         <div className="grid gap-5 md:grid-cols-2">
@@ -156,6 +209,10 @@ export function FromImportationToSalesCoursePage() {
               Download the PDF guide
             </a>
           </article>
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <WhatsAppButton />
         </div>
       </div>
     </main>

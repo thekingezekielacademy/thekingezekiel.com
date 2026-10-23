@@ -107,6 +107,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
       title: 'From Importation to Sales — Full Course | King Ezekiel',
       description: 'Watch practical lessons on marketing, mini importation, WhatsApp automation and Facebook Ads, and access the detailed PDF guide.',
+      robots: {
+        index: false,
+        follow: false,
+        googleBot: {
+          index: false,
+          follow: false,
+        },
+      },
     };
   }
 
