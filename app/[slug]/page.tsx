@@ -10,6 +10,10 @@ import WaSalesMachineLandingPage from '../../components/course/WaSalesMachineLan
 import WaSalesMachineFullPackagePage from '../../components/course/WaSalesMachineFullPackagePage';
 import EbookSalesLandingPage from '../../components/course/EbookSalesLandingPage';
 import EbooksSellLikeCrazyFullCoursePage from '../../components/course/EbooksSellLikeCrazyFullCoursePage';
+import {
+  FromImportationToSalesAdPage,
+  FromImportationToSalesCoursePage,
+} from '../../components/course/FromImportationToSalesPages';
 import { DynamicTemplate } from '../../components/renderer/DynamicTemplate';
 import { VisionFooter } from '../../components/portfolio/VisionFooter';
 import { Navbar } from '../../components/portfolio/Navbar';
@@ -92,24 +96,38 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  if (slug === 'ad-for-from-importation-to-sales') {
+    return {
+      title: 'From Importation to Sales | King Ezekiel',
+      description: 'Learn mini importation, marketing and sales with practical video lessons and a detailed PDF guide.',
+    };
+  }
+
+  if (slug === 'full-course-from-importation-to-sales') {
+    return {
+      title: 'From Importation to Sales — Full Course | King Ezekiel',
+      description: 'Watch practical lessons on marketing, mini importation, WhatsApp automation and Facebook Ads, and access the detailed PDF guide.',
+    };
+  }
+
   return {};
 }
 
 // Use standard App Router Next.js 13+ generateStaticParams
 export async function generateStaticParams() {
   const pagesDirectory = path.join(process.cwd(), 'data/pages');
-
-  if (!fs.existsSync(pagesDirectory)) {
-    return [];
-  }
-
-  const filenames = fs.readdirSync(pagesDirectory);
-
-  return filenames
+  const filenames = fs.existsSync(pagesDirectory) ? fs.readdirSync(pagesDirectory) : [];
+  const slugs = filenames
     .filter((filename) => filename.endsWith('.json') && filename !== 'home.json' && filename !== 'home-elementor-demo.json')
-    .map((filename) => ({
-      slug: filename.replace(/\.json$/, ''),
-    }));
+    .map((filename) => filename.replace(/\.json$/, ''));
+
+  slugs.push(
+    'full-package-ai-business-automation-monetization',
+    'ad-for-from-importation-to-sales',
+    'full-course-from-importation-to-sales',
+  );
+
+  return [...new Set(slugs)].map((slug) => ({ slug }));
 }
 
 function HiddenCourseBundlePage() {
@@ -230,6 +248,14 @@ export default async function DynamicPage({ params }: { params: Promise<{ slug: 
 
   if (slug === 'wa-sales-machine-full-package') {
     return <WaSalesMachineFullPackagePage />;
+  }
+
+  if (slug === 'ad-for-from-importation-to-sales') {
+    return <FromImportationToSalesAdPage />;
+  }
+
+  if (slug === 'full-course-from-importation-to-sales') {
+    return <FromImportationToSalesCoursePage />;
   }
 
   if (slug === hiddenSlug) {
