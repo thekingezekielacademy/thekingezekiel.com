@@ -22,6 +22,18 @@ const courseItems = [
       "Learn ways to use WhatsApp automation and Facebook Ads to support your marketing and sales.",
     href: "https://www.youtube.com/playlist?list=PLSQqShcvhT5Y",
   },
+  {
+    title: "TIKTOK ADS MASTERY: MASTER TIKTOK ADS FROM ZERO TO LIVE",
+    subtitle:
+      "Learn how to set up your full TikTok Ad Account, run TikTok Ads, target audiences, and more.",
+    href: "https://www.youtube.com/playlist?list=PLJgVUrDMslzVH1Pgm22DHDpxHqW_ITltT",
+  },
+  {
+    title: "100X SALES MASTERY",
+    subtitle:
+      "Understand sales and sales closing, from beginner level to professional.",
+    href: "https://www.youtube.com/playlist?list=PLYMPbkF2C5CY",
+  },
 ];
 
 const adCourseTopics = [
