@@ -65,6 +65,33 @@ const adCourseTopics = [
   },
 ];
 
+const audienceItems = [
+  {
+    title: "NEW TO IMPORTATION",
+    text: "You want to learn how to start importing products and understand the steps before you begin.",
+  },
+  {
+    title: "ALREADY IMPORTING",
+    text: "You import products and want to improve how you find customers and sell what you bring in.",
+  },
+  {
+    title: "ALREADY SELLING PRODUCTS",
+    text: "You have a product or business and want to reach more buyers and grow your sales.",
+  },
+  {
+    title: "LOOKING FOR A NEW BUSINESS",
+    text: "You are exploring a business idea and want to learn about importing products and selling them.",
+  },
+  {
+    title: "WANT TO LEARN DIGITAL ADS",
+    text: "You want to learn how Facebook and TikTok Ads can help you reach people who may want your products.",
+  },
+  {
+    title: "WANT TO GET BETTER AT SALES",
+    text: "You want to understand marketing, speak to customers clearly, and become more confident at closing sales.",
+  },
+];
+
 function WhatsAppButton({ className = "" }: { className?: string }) {
   return (
     <a
@@ -135,6 +162,32 @@ export function FromImportationToSalesAdPage() {
                 <h3 className="font-bold text-portfolio-gold">{topic.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-white sm:text-base">
                   {topic.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="audience"
+          className="mb-8 rounded-[22px] border border-portfolio-border bg-portfolio-card p-6 sm:p-8"
+        >
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-bold tracking-[-0.04em] text-white sm:text-4xl">
+              Who Is This For?
+            </h2>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {audienceItems.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-[22px] border border-portfolio-border bg-portfolio-bg p-5 sm:p-6"
+              >
+                <h3 className="text-base font-semibold uppercase tracking-[0.1em] text-portfolio-gold">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-portfolio-muted sm:text-base">
+                  {item.text}
                 </p>
               </article>
             ))}
