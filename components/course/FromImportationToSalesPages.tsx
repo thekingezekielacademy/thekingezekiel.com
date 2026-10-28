@@ -1,5 +1,6 @@
+import { CoursePreviewVideo } from "./CoursePreviewVideo";
+
 const WHATSAPP_BUY_URL = "https://wa.link/y3feal";
-const COURSE_PAGE_URL = "/full-course-from-importation-to-sales";
 const PDF_GUIDE_URL =
   "https://drive.google.com/drive/folders/16DmdFRBhjcuM0J-l1roRWSxN_xweDGb3?usp=sharing";
 
@@ -103,6 +104,12 @@ export function FromImportationToSalesAdPage() {
           <WhatsAppButton className="mt-8" />
         </header>
 
+        <CoursePreviewVideo
+          videoId="6d0L_IkeKMM"
+          title="Marketing Starts With the Customer, Not the Product"
+          description="Marketing Starts With The Customer , Not The Product!"
+        />
+
         <section className="mb-8 rounded-[22px] border border-portfolio-border bg-portfolio-card p-6 sm:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-portfolio-gold">
             YOUR LEARNING PATH
@@ -113,12 +120,6 @@ export function FromImportationToSalesAdPage() {
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-portfolio-muted sm:text-base">
             Start with the fundamentals of marketing, learn mini importation, then explore automation and Facebook advertising to support your sales journey.
           </p>
-          <a
-            href={COURSE_PAGE_URL}
-            className="mt-6 inline-flex items-center justify-center rounded-xl border border-portfolio-gold/70 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-portfolio-gold transition-colors hover:bg-portfolio-gold hover:text-black"
-          >
-            Preview the course lessons
-          </a>
         </section>
 
         <section className="mb-8 rounded-[22px] border border-portfolio-border bg-portfolio-card p-6 sm:p-8">
