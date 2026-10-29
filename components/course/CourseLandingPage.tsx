@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { YouTubePlayer } from "../renderer/DynamicComponents";
 import { CoursePreviewVideo } from "./CoursePreviewVideo";
+import { ResaleRightsSection } from "./ResaleRightsSection";
 
 export const WHATSAPP_URL =
   process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.link/5mwqzs";
@@ -363,6 +364,8 @@ export default function CourseLandingPage() {
             <p className="mt-3 text-sm text-portfolio-muted">Get lifetime access + support group.</p>
           </div>
         </section>
+
+        <ResaleRightsSection />
 
         <section id="why" className="py-14 sm:py-18">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

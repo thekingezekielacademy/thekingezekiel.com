@@ -3,6 +3,7 @@ import {
   YouTubePlayer,
 } from "../renderer/DynamicComponents";
 import { AdBuildVideoPlayer } from "./AdBuildCommunityLandingPage";
+import { ResaleRightsSection } from "./ResaleRightsSection";
 
 const WHATSAPP_BUY_URL = "https://wa.link/jz5ber";
 
@@ -68,6 +69,8 @@ export default function EbookSalesLandingPage({ title }: EbookSalesLandingPagePr
             <BuyViaWhatsAppButton />
           </div>
         </section>
+
+        <ResaleRightsSection />
 
         <section className="px-4 py-8 sm:px-6 md:px-10 md:py-12">
           <div className="mx-auto max-w-5xl">
