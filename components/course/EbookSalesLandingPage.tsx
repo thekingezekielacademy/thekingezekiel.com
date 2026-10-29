@@ -133,16 +133,11 @@ export default function EbookSalesLandingPage({ title }: EbookSalesLandingPagePr
                 id="amazon-kdp-heading"
                 className="mt-2 text-xl font-extrabold text-white sm:text-2xl"
               >
-                AMAZON KDP 101 (BONUS)
+                AMAZON KDP 101
               </h2>
-              <a
-                href="https://www.youtube.com/playlist?list=PLJgVUrDMslzVeApy3El_qbiczL1Uw8YeS"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="mt-5 inline-flex items-center justify-center rounded-xl border border-portfolio-gold bg-portfolio-gold px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-[#e7c75c] focus:outline-none focus:ring-2 focus:ring-portfolio-gold focus:ring-offset-2 focus:ring-offset-portfolio-bg"
-              >
-                Watch Amazon KDP 101
-              </a>
+              <p className="mt-3 text-base font-semibold leading-relaxed text-white sm:text-lg">
+                Amazon KDP 101 is included as a bonus with this training.
+              </p>
             </section>
 
             <section aria-labelledby="audience-heading" className="mt-14">
