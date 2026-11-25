@@ -14,6 +14,11 @@ const courseItems = [
     href: "https://www.youtube.com/playlist?list=PLYFx2PudBxIY",
     bonus: true,
   },
+  {
+    title: "AMAZON KDP",
+    subtitle: "Create Book, Sell and Earn from Amazon KDP",
+    href: "https://www.youtube.com/playlist?list=PLJgVUrDMslzVeApy3El_qbiczL1Uw8YeS",
+  },
 ];
 
 export default function EbooksSellLikeCrazyFullCoursePage() {
